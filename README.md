@@ -68,7 +68,7 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 - [ ] **GET /products**:
 
   - Obtener un listado de los products
-  - debe responder solo con los datos necesarios para una primera vista (name, imagen principal, precio)
+  - debe responder solo con los datos necesarios para una primera vista (name, imagen principal, precio) y id
 
 - [ ] **GET /products?name="..."**:
 
@@ -84,7 +84,7 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 - [ ] **POST /product**:
 
   - Recibe los datos recolectados desde el formulario controlado por body, validar la data
-  - Crea un producto en la base de datos, recuerda verificar el modelo E-R para ingresar correctamente un producto a la D.B.
+  - Crea un producto en la base de datos, recuerda verificar el modelo E-R para ingresar correctamente un producto a la D.B. (name,description,mainImg,imgs,supplier,categories,salePrice,purchasePrice,stock,discount)
 
 - [ ] **GET /categories**:
 
