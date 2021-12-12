@@ -1,3 +1,5 @@
 * armar el esqueleto del proyecto
 * montarlo a github he invitar a cada miembro del equipo
-* armar las rutas mas importantes y hardcodear cada respuesta
+* crear los modelos y relaciones
+* armar un mockup de data que toque ingresar en postman...
+* armar las rutas mas importantes (crear productos y consultarlo) sin perder mucho tiempo, y dejarlo funcionando lo mas pronto posible para que el front pueda hacer consultas y avancen 

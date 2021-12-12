@@ -1,11 +1,41 @@
 const { Router } = require("express");
-// Importar todos los routers;
-// Ejemplo: const authRouter = require('./auth.js');
-
 const products = Router();
+const jsonProducts = require("../mockup/products.json");
+const { Product } = require("../db");
 
-products.get("/", (req, res) => {
-  res.json();
+products.get("/", async (req, res) => {
+  res.json(jsonProducts);
 });
+/* products.post("/", async (req, res, next) => {
+  const {
+    name,
+    description,
+    mainImg,
+    imgs,
+    supplier,
+    categories,
+    salePrice,
+    purchasePrice,
+    stock,
+    discount,
+  } = req.body;
+  try {
+    const [product,created] = await Product.findOrCreate(
+      {
+        name,
+        description,
+        mainImg,
+        supplier,
+        salePrice,
+        purchasePrice,
+        stock,
+        discount,
+      }
+    )
+  } catch (error) {
+    next()
+  }
+  res.json(jsonProducts);
+}); */
 
 module.exports = products;
