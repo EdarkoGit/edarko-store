@@ -1,2 +1,3 @@
 * armar el esqueleto del proyecto
 * montarlo a github he invitar a cada miembro del equipo
+* armar las rutas mas importantes y hardcodear cada respuesta

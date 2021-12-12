@@ -1,0 +1,32 @@
+[
+  {
+    "name": "edwin",
+    "phone": 3335544,
+    "email": "edwin@gmail.com"
+  },
+  {
+    "name": "edarko",
+    "phone": 1118899,
+    "email": "edwin@gmail.com"
+  },
+  {
+    "name": "nico",
+    "phone": 2221100,
+    "email": "nico@gmail.com"
+  },
+  {
+    "name": "andrea",
+    "phone": 3411010,
+    "email": "andrea@gmail.com"
+  },
+  {
+    "name": "martina",
+    "phone": 7772747,
+    "email": "martina@gmail.com"
+  },
+  {
+    "name": "tony",
+    "phone": 2172747,
+    "email": "tony@gmail.com"
+  }
+]

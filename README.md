@@ -70,24 +70,25 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
   - Obtener un listado de los products
   - debe responder solo con los datos necesarios para una primera vista (name, imagen principal, precio)
 
-- [ ] **GET /product?name="..."**:
+- [ ] **GET /products?name="..."**:
 
   - Obtener un listado de los productos que contengan la palabra ingresada como query parameter
   - Si no existe ningún producto mostrar un mensaje adecuado. res.json({msg:'Not found'})
 
-- [ ] **GET /product/{idProduct}**:
+- [ ] **GET /products/{idProduct}**:
 
   - Obtener el detalle de un producto en particular (fullData)
   - Incluir las categories asociadas
   - Incluir la img principal e imagenes asociadas, en caso que tenga.
 
+- [ ] **POST /product**:
+
+  - Recibe los datos recolectados desde el formulario controlado por body, validar la data
+  - Crea un producto en la base de datos, recuerda verificar el modelo E-R para ingresar correctamente un producto a la D.B.
+
 - [ ] **GET /categories**:
 
   - Obtener todas las categories posibles.
-
-- [ ] **POST /product**:
-  - Recibe los datos recolectados desde el formulario controlado por body, validar la data
-  - Crea un producto en la base de datos, recuerda verificar el modelo E-R para ingresar correctamente un producto a la D.B.
 
 #### Frontend
 
