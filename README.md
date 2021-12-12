@@ -57,18 +57,22 @@ La idea general es crear una aplicación en la cual se puedan ver los distintos 
 
 #### Base de datos
 
-El modelo de la base de datos: https://lucid.app/lucidchart/a5a5fa32-d658-45ca-bbb9-6c7948055a70/edit?invitationId=inv_bfa12a67-7ceb-4c2d-9231-6cc1c659b7b4
+El modelo de la base de datos: https://lucid.app/lucidchart/9726f854-8120-440a-aace-08ed6276956f/edit?invitationId=inv_e4dab0c1-39f3-4fa6-b7de-0c1de33f4299
 
 #### Backend
 
 Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
-**IMPORTANTE**: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
+- [ ] **POST /product**:
+
+  - Recibe los datos necesarios por body, valida la data
+  - Crea un producto en la base de datos, recuerdar verificar el modelo E-R para ingresar correctamente un producto a la D.B.
+    la data se debe repartir en los modelos: Product, Image, Category, Supplier.
 
 - [ ] **GET /products**:
 
   - Obtener un listado de los products
-  - debe responder solo con los datos necesarios para una primera vista (name, imagen principal, precio) y id
+  - debe responder solo con los datos necesarios para una primera vista (name, imagen principal, precio) y id.
 
 - [ ] **GET /products?name="..."**:
 
@@ -79,12 +83,7 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
   - Obtener el detalle de un producto en particular (fullData)
   - Incluir las categories asociadas
-  - Incluir la img principal e imagenes asociadas, en caso que tenga.
-
-- [ ] **POST /product**:
-
-  - Recibe los datos recolectados desde el formulario controlado por body, validar la data
-  - Crea un producto en la base de datos, recuerda verificar el modelo E-R para ingresar correctamente un producto a la D.B. (name,description,mainImg,imgs,supplier,categories,salePrice,purchasePrice,stock,discount)
+  - Incluir imagenes asociadas, en caso que tenga.
 
 - [ ] **GET /categories**:
 
@@ -94,24 +93,26 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
 Se debe desarrollar una aplicación de React/Redux que contenga las siguientes pantallas/rutas.
 
-**Pagina inicial**: deben armar una landing page /home
+**Pagina inicial**: /
 
 **Ruta para comprar productos**: /store
 debería contener:
 
-- [ ] Input de búsqueda para encontrar productos por nombre
-- [ ] Área donde se verá el listado de productos. Deberá mostrar su:
+- [ ] form de búsqueda para encontrar productos por nombre
+- [ ] Área donde se verá el listado de productos (paginado). Deberá mostrar su:
   - Nombre
   - Imagen principal
   - Precio
-- [ ] Botones/Opciones para filtrar por categories (desde el backend se hará el filtrado, solo debería pegarle a la ruta encargada entregarle los datos ya filtrados)
-- [ ] Botones/Opciones para ordenar tanto ascendentemente como descendentemente los productos por precio
-- [ ] Paginado; 10 productos por pagina, mostrando los primeros 10 en la primer pagina. (desde el back ya debería tener una ruta que entrega la pagina que se le pida) ej: si dan click en botón q renderiza la pagina 2, pegarle al back y que entregue los productos de dicha pagina
+- [ ] Paginado; 10 productos por pagina. (desde el back ya debería tener una ruta que entrega la pagina que se le pida) ej: si dan click en algún botón que renderiza la pagina 2, pegarle al back y que entregue los productos de dicha pagina.
+- [ ] Opciones para filtrar por categories (desde el backend se hará el filtrado, solo debería pegarle a la ruta encargada entregarle los datos ya filtrados)
+- [ ] Opciones para ordenar tanto ascendentemente como descendentemente los productos por precio
 
-**Ruta de detalle de videojuego**: debe contener
+**Ruta de detalle de producto**:
 
 - pegarle al back para obtener el detalle de un producto en particular (fullData). y renderizarlo en una card especial, lo mas hermoso que se pueda.
 - boton agregar al carrito
+- boton agregar a favoritos
+- boton comprar
 
 **Ruta de creación de productos**: debe contener
 
