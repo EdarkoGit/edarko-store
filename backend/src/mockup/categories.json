@@ -1,20 +1,2 @@
-[
-  {
-    "name": "computer"
-  },
-  {
-    "name": "mobile"
-  },
-  {
-    "name": "tv"
-  },
-  {
-    "name": "accessory"
-  },
-  {
-    "name": "tablet"
-  },
-  {
-    "name": "laptop"
-  }
-]
+["computer", "mobile", "tv", "accessory", "tablet", "laptop"]
+
