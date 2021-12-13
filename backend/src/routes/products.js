@@ -3,15 +3,12 @@ const products = Router();
 const jsonProducts = require("../mockup/products.json");
 const { Product } = require("../db");
 
-products.get("/", async (req, res) => {
-  res.json(jsonProducts);
-});
-/* products.post("/", async (req, res, next) => {
+products.post("/", async (req, res, next) => {
   const {
     name,
     description,
     mainImg,
-    imgs,
+    images,
     supplier,
     categories,
     salePrice,
@@ -20,22 +17,29 @@ products.get("/", async (req, res) => {
     discount,
   } = req.body;
   try {
-    const [product,created] = await Product.findOrCreate(
-      {
-        name,
-        description,
-        mainImg,
-        supplier,
-        salePrice,
-        purchasePrice,
-        stock,
-        discount,
-      }
-    )
+    const [product, created] = await Product.findOrCreate({
+      name,
+      description,
+      mainImg,
+      salePrice,
+      purchasePrice,
+      stock,
+      discount,
+    });
+    if (created) {
+      product.setImages(images);
+      product.setSuppliers(supplier);
+      product.setCategories(categories);
+    } else {
+      res.json({ msg: "Error, this product already exists" });
+    }
   } catch (error) {
-    next()
+    next();
   }
+});
+
+products.get("/", async (req, res) => {
   res.json(jsonProducts);
-}); */
+});
 
 module.exports = products;
