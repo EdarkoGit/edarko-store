@@ -5,22 +5,20 @@ const { Category } = require("../db");
 
 categories.post("/", async (req, res, next) => {
   const { categories } = req.body;
+  const notCreated = [];
   try {
-    let arrBugs = [];
-    categories.forEach(async (element) => {
+    for (let i = 0; i < categories.length; i++) {
       const [category, created] = await Category.findOrCreate({
-        where: { name: element },
-        default: { name: element },
+        where: { name: categories[i] },
+        default: { name: categories[i] },
       });
       if (!created) {
-        console.log("no created");
-        arrBugs.push(element);
+        notCreated.push(categories[i]);
       }
-    });
-    console.log("------>", arrBugs);
+    }
     res.json({
-      msg: "Finished process",
-      bugs: arrBugs.length > 0 ? arrBugs : "Faultlessly",
+      msg: "Categories created successfully",
+      notCreated: notCreated.length ? notCreated : "Faultlessly",
     });
   } catch (error) {
     next();
