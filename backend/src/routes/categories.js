@@ -10,7 +10,7 @@ categories.post("/", async (req, res, next) => {
     for (let i = 0; i < categories.length; i++) {
       const [category, created] = await Category.findOrCreate({
         where: { name: categories[i] },
-        default: { name: categories[i] },
+        defaults: { name: categories[i] },
       });
       if (!created) {
         notCreated.push(categories[i]);
