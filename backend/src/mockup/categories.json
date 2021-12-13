@@ -1,2 +1,4 @@
-["computer", "mobile", "tv", "accessory", "tablet", "laptop"]
+{
+  "categories": ["computer", "mobile", "tv", "accessory", "tablet", "laptop"]
+}
 
