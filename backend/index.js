@@ -20,9 +20,18 @@
 const server = require("./src/server.js");
 const { conn } = require("./src/db.js");
 
+// for development enviroment
+const loadMockProducts = process.argv[2]
+  ? require("./src/mockup/utils")
+  : false;
+
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
   server.listen(3001, () => {
+    if (loadMockProducts) {
+      loadMockProducts();
+      console.log("% loading mockup of products");
+    }
     console.log("%s listening at 3001"); // eslint-disable-line no-console
   });
 });

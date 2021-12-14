@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon -L",
+    "mockup": "nodemon -L index.js mockup",
     "test": "mocha -w ./tests/**/*.spec.js"
   },
   "author": "Henry",
