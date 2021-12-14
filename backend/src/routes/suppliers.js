@@ -22,7 +22,7 @@ suppliers.post("/", async (req, res, next) => {
       notCreated: notCreated.length ? notCreated : "Faultlessly",
     });
   } catch (error) {
-    res.json(error);
+    next(error);
   }
 });
 

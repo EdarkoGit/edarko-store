@@ -1,40 +1,56 @@
 const { Router } = require("express");
 const products = Router();
 const jsonProducts = require("../mockup/products.json");
-const { Product } = require("../db");
+const { Product, Image } = require("../db");
 
 products.post("/", async (req, res, next) => {
   const {
+    id,
     name,
     description,
-    mainImg,
-    images,
-    supplier,
-    categories,
-    salePrice,
     purchasePrice,
+    salePrice,
+    mainImg,
     stock,
     discount,
+    imgs,
+    supplier,
+    categories,
   } = req.body;
   try {
     const [product, created] = await Product.findOrCreate({
-      name,
-      description,
-      mainImg,
-      salePrice,
-      purchasePrice,
-      stock,
-      discount,
+      where: { id },
+      defaults: {
+        id,
+        name,
+        description,
+        purchasePrice,
+        salePrice,
+        mainImg,
+        stock,
+        discount,
+      },
     });
     if (created) {
-      product.setImages(images);
-      product.setSuppliers(supplier);
-      product.setCategories(categories);
+      const intancesImage = [];
+      for (let i = 0; i < imgs.length; i++) {
+        const [img, created] = await Image.findOrCreate({
+          where: { url: imgs[i] },
+          defaults: {
+            url: imgs[i],
+          },
+        });
+        intancesImage.push(img);
+      }
+      await product.setImages(intancesImage);
+      //product.setSuppliers(supplier);
+      //product.setCategories(categories);
+      res.json({ msg: "Product created successfully" });
     } else {
       res.json({ msg: "Error, this product already exists" });
     }
   } catch (error) {
-    next();
+    next(error);
   }
 });
 

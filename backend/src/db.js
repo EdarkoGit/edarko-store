@@ -49,17 +49,14 @@ const {
 Product.belongsToMany(Category, { through: "ProductCategory" });
 Category.belongsToMany(Product, { through: "ProductCategory" });
 
-Product.hasMany(Image);
-Image.belongsTo(Product);
+Product.belongsToMany(Image, { through: "ProductImage" });
+Image.belongsToMany(Product, { through: "ProductImage" });
 
 Product.belongsToMany(Supplier, { through: "ProductSupplier" });
 Supplier.belongsToMany(Product, { through: "ProductSupplier" });
 
 Product.belongsToMany(User, { through: Comment });
 User.belongsToMany(Product, { through: Comment });
-
-Product.hasMany(Image);
-Image.belongsTo(Product);
 
 Product.belongsToMany(User, { through: "Favorite" });
 User.belongsToMany(Product, { through: "Favorite" });
