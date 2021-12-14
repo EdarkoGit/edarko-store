@@ -57,10 +57,6 @@ products.post("/", async (req, res, next) => {
 products.get("/", async (req, res, next) => {
   const PRODUCTS_PER_PAGE = 10;
   try {
-    const isLoaded = (await Product.findAll()).length;
-    if (!isLoaded) {
-      Product.bulkCreate(jsonProducts.products);
-    }
     const page = req.query.page || 1;
     const condition = {
       offset: (page - 1) * PRODUCTS_PER_PAGE,
