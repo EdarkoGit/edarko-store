@@ -1,80 +1,79 @@
-[
-  {
-    "name": "Notebook Latitude",
-    "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
-    "mainImg": "https://i.ebayimg.com/images/g/De0AAOSwHIRgsaTu/s-l1600.png",
-    "imgs": [
-      "https://i.ebayimg.com/images/g/MJUAAOSwPvlgZNxQ/s-l1600.png"
-    ],
-    "supplier": 1,
-    "categories": [1,2],
-    "salePrice": 700,
-    "purchasePrice": 400,
-    "stock": 5,
-    "discount": 0,
-    "rating": 0,
-    "comment":[]
-  },
-  {
-    "name": "Notebook Chuwi",
-    "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
-    "mainImg": "https://i.ebayimg.com/images/g/itIAAOSw0WBhUWHf/s-l1600.jpg",
-    "imgs": [
-      "https://i.ebayimg.com/images/g/eIMAAOSwILVhkhCm/s-l1600.jpg"
-    ],
-    "supplier": 2,
-    "categories": [3,4],
-    "salePrice": 600,
-    "purchasePrice": 300,
-    "stock": 5,
-    "discount": 0,
-    "rating": 0,
-    "comment":[]
-  },
-  {
-    "name": "Auriculares Bluetooth",
-    "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
-    "mainImg": "https://i.ebayimg.com/images/g/digAAOSwaXlhre44/s-l1600.jpg",
-    "imgs": [
-     "https://i.ebayimg.com/images/g/8isAAOSwPUthre5A/s-l1600.jpg"
-    ],
-    "supplier": 2,
-    "categories": [2,3],
-    "salePrice": 20,
-    "purchasePrice": 5,
-    "stock": 5,
-    "discount": 0,
-    "rating": 0,
-    "comment":[]
-  },
-  {
-    "name": "Teclado PC multicolor",
-    "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
-    "mainImg": "https://i.ebayimg.com/images/g/hR8AAOSwkfxhpKtf/s-l1600.jpg",
-    "imgs": [
-      "https://i.ebayimg.com/images/g/P9cAAOSwIJNhpKsY/s-l1600.jpg"
-    ],
-    "supplier": 3,
-    "categories": [2,3],
-    "salePrice": 70,
-    "purchasePrice": 10,
-    "stock": 5,
-    "discount": 0,
-    "rating": 0,
-    "comment":[3]
-  },
-  {
-    "name": "CPU PC Gamer ",
-    "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
-    "mainImg": "https://i.ebayimg.com/images/g/w68AAOSwFzRhq5Qo/s-l1600.jpg",
-    "imgs": [],
-    "supplier": 1,
-    "categories": [2,3],
-    "salePrice": 1200,
-    "purchasePrice": 600,
-    "stock": 5,
-    "discount": 0,
-    "rating": 0,
-    "comment":[1,2]
-  }  
-]
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Notebook Latitude",
+      "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
+      "mainImg": "https://i.ebayimg.com/images/g/De0AAOSwHIRgsaTu/s-l1600.png",
+      "imgs": ["https://i.ebayimg.com/images/g/MJUAAOSwPvlgZNxQ/s-l1600.png"],
+      "supplier": 1,
+      "categories": [1, 2],
+      "salePrice": 700,
+      "purchasePrice": 400,
+      "stock": 5,
+      "discount": 0,
+      "rating": 0,
+      "comment": []
+    },
+    {
+      "id": "2",
+      "name": "Notebook Chuwi",
+      "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
+      "mainImg": "https://i.ebayimg.com/images/g/itIAAOSw0WBhUWHf/s-l1600.jpg",
+      "imgs": ["https://i.ebayimg.com/images/g/eIMAAOSwILVhkhCm/s-l1600.jpg"],
+      "supplier": 2,
+      "categories": [3, 4],
+      "salePrice": 600,
+      "purchasePrice": 300,
+      "stock": 5,
+      "discount": 0,
+      "rating": 0,
+      "comment": []
+    },
+    {
+      "id": "3",
+      "name": "Auriculares Bluetooth",
+      "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
+      "mainImg": "https://i.ebayimg.com/images/g/digAAOSwaXlhre44/s-l1600.jpg",
+      "imgs": ["https://i.ebayimg.com/images/g/8isAAOSwPUthre5A/s-l1600.jpg"],
+      "supplier": 2,
+      "categories": [2, 3],
+      "salePrice": 20,
+      "purchasePrice": 5,
+      "stock": 5,
+      "discount": 0,
+      "rating": 0,
+      "comment": []
+    },
+    {
+      "id": "4",
+      "name": "Teclado PC multicolor",
+      "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
+      "mainImg": "https://i.ebayimg.com/images/g/hR8AAOSwkfxhpKtf/s-l1600.jpg",
+      "imgs": ["https://i.ebayimg.com/images/g/P9cAAOSwIJNhpKsY/s-l1600.jpg"],
+      "supplier": 3,
+      "categories": [2, 3],
+      "salePrice": 70,
+      "purchasePrice": 10,
+      "stock": 5,
+      "discount": 0,
+      "rating": 0,
+      "comment": [3]
+    },
+    {
+      "id": "5",
+      "name": "CPU PC Gamer ",
+      "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
+      "mainImg": "https://i.ebayimg.com/images/g/w68AAOSwFzRhq5Qo/s-l1600.jpg",
+      "imgs": [],
+      "supplier": 1,
+      "categories": [2, 3],
+      "salePrice": 1200,
+      "purchasePrice": 600,
+      "stock": 5,
+      "discount": 0,
+      "rating": 0,
+      "comment": [1, 2]
+    }
+  ]
+}

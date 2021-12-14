@@ -1,0 +1,15 @@
+{
+  "id": "1",
+  "name": "Notebook Latitude",
+  "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
+  "mainImg": "https://i.ebayimg.com/images/g/De0AAOSwHIRgsaTu/s-l1600.png",
+  "imgs": ["https://i.ebayimg.com/images/g/MJUAAOSwPvlgZNxQ/s-l1600.png"],
+  "supplier": 1,
+  "categories": [1, 2],
+  "salePrice": 700,
+  "purchasePrice": 400,
+  "stock": 5,
+  "discount": 0,
+  "rating": 0,
+  "comment": []
+}

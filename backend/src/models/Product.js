@@ -4,6 +4,12 @@ const { DataTypes } = require("sequelize");
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define("Product", {
+    id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      primaryKey: true,
+      unique: true,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -35,7 +41,6 @@ module.exports = (sequelize) => {
     },
     rating: {
       type: DataTypes.DOUBLE,
-      allowNull: false,
       validate: {
         min: 0,
         max: 5,
