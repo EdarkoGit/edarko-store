@@ -54,8 +54,29 @@ products.post("/", async (req, res, next) => {
   }
 });
 
-products.get("/", async (req, res) => {
-  res.json(jsonProducts);
+products.get("/", async (req, res, next) => {
+  const PRODUCTS_PER_PAGE = 10;
+  try {
+    const isLoaded = (await Product.findAll()).length;
+    if (!isLoaded) {
+      Product.bulkCreate(jsonProducts.products);
+    }
+    const page = req.query.page || 1;
+    const condition = {
+      offset: (page - 1) * PRODUCTS_PER_PAGE,
+      limit: PRODUCTS_PER_PAGE,
+    };
+    const { count, rows } = await Product.findAndCountAll(condition);
+    const response = {
+      page,
+      totalEntries: count,
+      entriesPerPage: PRODUCTS_PER_PAGE,
+      products: rows,
+    };
+    res.json(response);
+  } catch (error) {
+    next(error);
+  }
 });
 
 module.exports = products;
