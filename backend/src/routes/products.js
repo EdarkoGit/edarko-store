@@ -1,7 +1,8 @@
 const { Router } = require("express");
 const products = Router();
 const jsonProducts = require("../mockup/products.json");
-const { Product, Image, Supplier } = require("../db");
+const { Product, Image, Supplier, Category } = require("../db");
+const { validateExistsCategories } = require("./utils/utils");
 
 products.post("/", async (req, res, next) => {
   const {
@@ -18,6 +19,10 @@ products.post("/", async (req, res, next) => {
     categories,
   } = req.body;
   try {
+    if (!(await validateExistsCategories(Category, categories))) {
+      console.log({ msg: "One of the categories does not exist" });
+      return res.json({ msg: "One of the categories does not exist" });
+    }
     const [product, created] = await Product.findOrCreate({
       where: { id },
       defaults: {
