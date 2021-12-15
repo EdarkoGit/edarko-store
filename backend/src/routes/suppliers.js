@@ -25,5 +25,16 @@ suppliers.post("/", async (req, res, next) => {
     next(error);
   }
 });
+suppliers.get("/", async (req, res, next) => {
+  try {
+    const suppliers = await Supplier.findAll({
+      attributes: ["name", "phone", "email"],
+    });
+    if (!suppliers.length) return res.json({ msg: "Not found suppliers" });
+    res.json(suppliers);
+  } catch (error) {
+    next();
+  }
+});
 
 module.exports = suppliers;
