@@ -24,5 +24,14 @@ categories.post("/", async (req, res, next) => {
     next();
   }
 });
+categories.get("/", async (req, res, next) => {
+  try {
+    const categories = await Category.findAll({ attributes: ["id", "name"] });
+    if (!categories.length) return res.json({ msg: "Not found categories" });
+    res.json(categories);
+  } catch (error) {
+    next();
+  }
+});
 
 module.exports = categories;
