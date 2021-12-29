@@ -81,7 +81,11 @@ products.get("/", async (req, res, next) => {
       )
     );
     const products = cleanRows(rows);
-    res.json({ page, count, products });
+    res.json(
+      products.length
+        ? { page, count, products }
+        : { msg: "Not found products" }
+    );
   } catch (error) {
     next(error);
   }

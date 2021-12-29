@@ -16,18 +16,18 @@ const paramsfindAndCountAll = (page, limit, model, as, id) => {
 };
 const cleanRows = (rows) => {
   return rows.map((item) => {
-    const { id, name, salePrice, mainImg, rating, categories } = item;
-    const cleanCategories = categories.map((element) => ({
+    const { id, name, salePrice, mainImg, rating /* , categories */ } = item;
+    /* const cleanCategories = categories.map((element) => ({
       id: element.id,
       name: element.name,
-    }));
+    })); */
     return {
       id,
       name,
       salePrice,
       mainImg,
       rating,
-      categories: cleanCategories,
+      /* categories: cleanCategories, */
     };
   });
 };
