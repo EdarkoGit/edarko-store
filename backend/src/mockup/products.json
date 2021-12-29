@@ -11,32 +11,30 @@
         "phone": 3335544,
         "email": "edwin@gmail.com"
       }],
-      "categories": [1, 2],
+      "categories": [6],
       "salePrice": 700,
       "purchasePrice": 400,
       "stock": 5,
       "discount": 0,
-      "rating": 0,
-      "comment": []
+      "rating": 0
     },
     {
       "id": "2",
-      "name": "Notebook Chuwi",
-      "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
-      "mainImg": "https://i.ebayimg.com/images/g/itIAAOSw0WBhUWHf/s-l1600.jpg",
-      "imgs": ["https://i.ebayimg.com/images/g/eIMAAOSwILVhkhCm/s-l1600.jpg"],
+      "name": "Lenovo Tab M8 Tablet",
+      "description": "Stunning performance and stylish design combine in this quick, powerful Android tablet, powered by a Quad-Core, 2.0 GHz processor and Android 9 Pie /nThe modern, refined look and feel are accentuated by the full metal cover and 82% panel-to-body ratio  /nThe stunning 8 HD (1280 x 800) display brings you a crisper and brighter image, so you can watch your favorite movies and shows without missing a detail",
+      "mainImg": "https://m.media-amazon.com/images/I/716LsyDg3fL._AC_SX679_.jpg",
+      "imgs": ["https://m.media-amazon.com/images/I/71GaizJ+LuL._AC_SX679_.jpg"],
       "suppliers": [{
         "name": "edarko",
         "phone": 1118899,
         "email": "edarko@gmail.com"
       }],
-      "categories": [3, 4],
+      "categories": [5],
       "salePrice": 600,
       "purchasePrice": 300,
       "stock": 5,
       "discount": 0,
-      "rating": 0,
-      "comment": []
+      "rating": 0
     },
     {
       "id": "3",
@@ -49,13 +47,12 @@
         "phone": 2221100,
         "email": "nico@gmail.com"
       }],
-      "categories": [2, 3],
+      "categories": [4],
       "salePrice": 20,
       "purchasePrice": 5,
       "stock": 5,
       "discount": 0,
-      "rating": 0,
-      "comment": []
+      "rating": 0
     },
     {
       "id": "4",
@@ -68,13 +65,12 @@
         "phone": 3411010,
         "email": "andrea@gmail.com"
       }],
-      "categories": [2, 3],
+      "categories": [4],
       "salePrice": 70,
       "purchasePrice": 10,
       "stock": 5,
       "discount": 0,
-      "rating": 0,
-      "comment": [3]
+      "rating": 0
     },
     {
       "id": "5",
@@ -87,13 +83,52 @@
         "phone": 7772747,
         "email": "martina@gmail.com"
       }],
-      "categories": [2, 3],
+      "categories": [1],
       "salePrice": 1200,
       "purchasePrice": 600,
       "stock": 5,
       "discount": 0,
-      "rating": 0,
-      "comment": [1, 2]
+      "rating": 0
+    },
+    {
+      "id": "6",
+      "name": "2021 HP 14 inch HD Laptop",
+      "description": "AMD Athlon Mobile Processor with Radeon Graphics. AMD Athlon Silver 3050U (2.3 GHz, up to 3.2 GHz). Get more done faster on a reliable laptop that can keep up with your everyday tasks.14-inch diagonal HD, SVA, anti-glare, micro-edge, WLED-backlit, (1366 x 768) Display. Gives you the space and clarity you need to get your work done. Weighs 3.24 lbs. and measures 0.8 thin Ultrathin and ultralight for maximum portability, featuring a smaller screen size.RAM is upgraded to 16GB DDR4 SDRAM for multitasking Adequate high-bandwidth RAM to smoothly run multiple applications and browser tabs all at once. 512GB solid state drive (SSD) While offering less storage space than a hard drive, a flash-based SSD has no moving parts, resulting in faster start-up times and data access, no noise, and reduced heat production and power draw on the battery.Up to 10 Hours of battery life means you can transition from morning meetings to evening entertainment without plugging in.",
+      "mainImg": "https://m.media-amazon.com/images/I/81C7E9Fp7yL._AC_SX466_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/714K3sfx+oL._AC_SX466_.jpg"
+      ],
+      "suppliers": [{
+        "name": "martina",
+        "phone": 7772747,
+        "email": "martina@gmail.com"
+      }],
+      "categories": [6],
+      "salePrice": 700,
+      "purchasePrice": 539,
+      "stock": 10,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "id": "7",
+      "name": "HP 2021 Newest 14in HD Laptop Light-Weight",
+      "description": "✔【14 HD Display】14 HD(1366 x 768) Display with micro-edge bezel design, WLED-backlit, BrightView, Enjoy your entertainment with the great quality and high-definition detail of 1 million pixels /n✔【AMD Athlon Mobile Processor with Radeon Graphics】 AMD Athlon Silver 3050U (2.3 GHz, up to 3.2 GHz). This laptop is powered by AMD which gives good performance with efficiency. It can also do simple gaming thanks to its integrated AMD Radeon graphics. /n✔【Upgrade to 8GB RAM】Substantial high-bandwidth RAM to smoothly run your games and photo- and video-editing applications, as well as multiple programs and browser tabs all at once. /n【Upgrade to 64GB emmc + 256GB SSD】Speedy solid-state drive for seanless performance and reliable multitasking, allows you to store a large number of files, improving the reading speed of large files, ensuring daily use and the speed of opening large files, reduce the time of application and file loading /n✔【Activate 1 Year MS office 365 & Win10 in S mode】(About switch to regular Win10, see the detail in Product description) Activate pre-installed Office: 1.Launch any Office app > 2.Start your activation by signing in with your Microsoft account(Create a account if you don't have one yet) > 3.Click Activate Office > 4.Sign in your account and follow the next prompts. > 5.Complete Step 1,2 and 3 > 6.Click on Refresh once Office is ready > 7.Open a document and accept the license agreement",
+      "mainImg": "https://m.media-amazon.com/images/I/81NvTUBf9ZS._AC_SX466_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/81cWK1vPMpS._AC_SX466_.jpg"
+      ],
+      "suppliers": [{
+        "name": "martina",
+        "phone": 7772747,
+        "email": "martina@gmail.com"
+      }],
+      "categories": [6],
+      "salePrice": 469,
+      "purchasePrice": 320,
+      "stock": 10,
+      "discount": 0,
+      "rating": 0
     }
   ]
 }

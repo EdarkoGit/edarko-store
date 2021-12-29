@@ -46,11 +46,19 @@ const {
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
 
-Product.belongsToMany(Category, { through: "ProductCategory" });
-Category.belongsToMany(Product, { through: "ProductCategory" });
+Product.belongsToMany(Category, {
+  as: "categories",
+  through: "ProductCategory",
+  timestamps: false,
+});
+Category.belongsToMany(Product, {
+  as: "categories",
+  through: "ProductCategory",
+  timestamps: false,
+});
 
-Product.belongsToMany(Image, { through: "ProductImage" });
-Image.belongsToMany(Product, { through: "ProductImage" });
+Product.belongsToMany(Image, { through: "ProductImage", timestamps: false });
+Image.belongsToMany(Product, { through: "ProductImage", timestamps: false });
 
 Product.belongsToMany(Supplier, { through: "ProductSupplier" });
 Supplier.belongsToMany(Product, { through: "ProductSupplier" });

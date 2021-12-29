@@ -11,7 +11,7 @@ suppliers.post("/", async (req, res, next) => {
       const { name, phone, email } = suppliers[i];
       const [supplier, created] = await Supplier.findOrCreate({
         where: { email },
-        defaults: { name, phone, email },
+        defaults: { name, phone },
       });
       if (!created) {
         notCreated.push(suppliers[i]);

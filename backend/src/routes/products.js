@@ -1,8 +1,8 @@
 const { Router } = require("express");
 const products = Router();
-const jsonProducts = require("../mockup/products.json");
 const { Product, Image, Supplier, Category } = require("../db");
 const { validateExistsCategories } = require("./utils/utils");
+const { paramsfindAndCountAll, cleanRows } = require("./utils/products");
 
 products.post("/", async (req, res, next) => {
   const {
@@ -20,13 +20,11 @@ products.post("/", async (req, res, next) => {
   } = req.body;
   try {
     if (!(await validateExistsCategories(Category, categories))) {
-      console.log({ msg: "One of the categories does not exist" });
       return res.json({ msg: "One of the categories does not exist" });
     }
     const [product, created] = await Product.findOrCreate({
       where: { id },
       defaults: {
-        id,
         name,
         description,
         purchasePrice,
@@ -42,9 +40,6 @@ products.post("/", async (req, res, next) => {
       for (let i = 0; i < imgs.length; i++) {
         const [img, created] = await Image.findOrCreate({
           where: { url: imgs[i] },
-          defaults: {
-            url: imgs[i],
-          },
         });
         intancesImage.push(img);
       }
@@ -54,7 +49,6 @@ products.post("/", async (req, res, next) => {
           defaults: {
             phone: suppliers[i].phone,
             name: suppliers[i].name,
-            email: suppliers[i].email,
           },
         });
         intancesSupplier.push(supplier);
@@ -72,21 +66,21 @@ products.post("/", async (req, res, next) => {
 });
 
 products.get("/", async (req, res, next) => {
-  const PRODUCTS_PER_PAGE = 10;
+  const productsByPage = 2;
+  const { page } = req.query || 0;
+  const { category } = req.query;
   try {
-    const page = req.query.page || 1;
-    const condition = {
-      offset: (page - 1) * PRODUCTS_PER_PAGE,
-      limit: PRODUCTS_PER_PAGE,
-    };
-    const { count, rows } = await Product.findAndCountAll(condition);
-    const response = {
-      page,
-      totalEntries: count,
-      entriesPerPage: PRODUCTS_PER_PAGE,
-      products: rows,
-    };
-    res.json(response);
+    const { count, rows } = await Product.findAndCountAll(
+      paramsfindAndCountAll(
+        page,
+        productsByPage,
+        Category,
+        "categories",
+        category
+      )
+    );
+    const products = cleanRows(rows);
+    res.json({ page, count, products });
   } catch (error) {
     next(error);
   }
