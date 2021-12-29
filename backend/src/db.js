@@ -52,13 +52,18 @@ Product.belongsToMany(Category, {
   timestamps: false,
 });
 Category.belongsToMany(Product, {
-  as: "categories",
   through: "ProductCategory",
   timestamps: false,
 });
 
-Product.belongsToMany(Image, { through: "ProductImage", timestamps: false });
-Image.belongsToMany(Product, { through: "ProductImage", timestamps: false });
+Product.belongsToMany(Image, {
+  through: "ProductImage",
+  timestamps: false,
+});
+Image.belongsToMany(Product, {
+  through: "ProductImage",
+  timestamps: false,
+});
 
 Product.belongsToMany(Supplier, { through: "ProductSupplier" });
 Supplier.belongsToMany(Product, { through: "ProductSupplier" });

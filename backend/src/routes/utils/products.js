@@ -25,5 +25,29 @@ const cleanProducts = (rows) => {
     };
   });
 };
+const cleanOneProduct = (product) => {
+  const {
+    id,
+    name,
+    description,
+    salePrice,
+    mainImg,
+    rating,
+    stock,
+    discount,
+    Images,
+  } = product;
+  return {
+    id,
+    name,
+    description,
+    salePrice,
+    mainImg,
+    rating,
+    stock,
+    discount,
+    imgs: Images.map((item) => item.url),
+  };
+};
 
-module.exports = { paramsfindAndCountAll, cleanProducts };
+module.exports = { paramsfindAndCountAll, cleanProducts, cleanOneProduct };

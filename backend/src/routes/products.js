@@ -2,7 +2,11 @@ const { Router } = require("express");
 const products = Router();
 const { Product, Image, Supplier, Category, Op } = require("../db");
 const { validateExistsCategories } = require("./utils/utils");
-const { paramsfindAndCountAll, cleanProducts } = require("./utils/products");
+const {
+  paramsfindAndCountAll,
+  cleanProducts,
+  cleanOneProduct,
+} = require("./utils/products");
 
 products.post("/", async (req, res, next) => {
   const {
@@ -93,6 +97,19 @@ products.get("/", async (req, res, next) => {
           : { msg: "Not found products" }
       );
     }
+  } catch (error) {
+    next(error);
+  }
+});
+products.get("/:id", async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const intanceProduct = await Product.findOne({
+      where: { id },
+      include: [{ model: Image }],
+    });
+    const product = cleanOneProduct(intanceProduct);
+    res.json(product);
   } catch (error) {
     next(error);
   }
