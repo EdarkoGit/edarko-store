@@ -67,8 +67,9 @@ products.post("/", async (req, res, next) => {
 
 products.get("/", async (req, res, next) => {
   const productsByPage = 2;
-  const { page } = req.query || 0;
+  const page = req.query.page || 0;
   const { category } = req.query;
+  console.log(page, productsByPage);
   try {
     const { count, rows } = await Product.findAndCountAll(
       paramsfindAndCountAll(

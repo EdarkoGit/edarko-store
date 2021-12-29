@@ -72,7 +72,7 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 - [ ] **GET /products**:
 
   - Obtener un listado de los products
-  - debe responder solo con los datos necesarios para una primera vista (name, imagen principal, precio) y id.
+  - Debe responder solo con los datos necesarios para una primera vista (name, imagen principal, precio,rating) y id.
 
 - [ ] **GET /products?name="..."**:
 

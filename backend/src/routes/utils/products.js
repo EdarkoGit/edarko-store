@@ -1,4 +1,5 @@
 const paramsfindAndCountAll = (page, limit, model, as, id) => {
+  console.log(page * limit);
   return {
     attributes: ["id", "name", "salePrice", "mainImg", "rating"],
     offset: page * limit,
