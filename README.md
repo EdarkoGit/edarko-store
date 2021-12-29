@@ -81,8 +81,7 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
 - [ ] **GET /products/{idProduct}**:
 
-  - Obtener el detalle de un producto en particular (fullData)
-  - Incluir las categories asociadas
+  - Obtener el detalle de un producto en particular (solo datos necesarios para la ruta detalle del front),
   - Incluir imagenes asociadas, en caso que tenga.
 
 - [ ] **GET /categories**:
