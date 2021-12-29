@@ -1,8 +1,8 @@
 const { Router } = require("express");
 const products = Router();
-const { Product, Image, Supplier, Category } = require("../db");
+const { Product, Image, Supplier, Category, Op } = require("../db");
 const { validateExistsCategories } = require("./utils/utils");
-const { paramsfindAndCountAll, cleanRows } = require("./utils/products");
+const { paramsfindAndCountAll, cleanProducts } = require("./utils/products");
 
 products.post("/", async (req, res, next) => {
   const {
@@ -68,23 +68,31 @@ products.post("/", async (req, res, next) => {
 products.get("/", async (req, res, next) => {
   const productsByPage = 2;
   const page = req.query.page || 0;
-  const { category } = req.query;
+  const { category, name } = req.query;
   try {
-    const { count, rows } = await Product.findAndCountAll(
-      paramsfindAndCountAll(
-        page,
-        productsByPage,
-        Category,
-        "categories",
-        category
-      )
-    );
-    const products = cleanRows(rows);
-    res.json(
-      products.length
-        ? { page, count, products }
-        : { msg: "Not found products" }
-    );
+    if (name) {
+      const rows = await Product.findAll({
+        where: { name: { [Op.iLike]: `%${name}%` } },
+      });
+      const products = cleanProducts(rows);
+      res.json(products.length ? products : { msg: "Not found products" });
+    } else {
+      const { count, rows } = await Product.findAndCountAll(
+        paramsfindAndCountAll(
+          page,
+          productsByPage,
+          Category,
+          "categories",
+          category
+        )
+      );
+      const products = cleanProducts(rows);
+      res.json(
+        products.length
+          ? { page, count, products }
+          : { msg: "Not found products" }
+      );
+    }
   } catch (error) {
     next(error);
   }

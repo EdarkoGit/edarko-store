@@ -13,22 +13,17 @@ const paramsfindAndCountAll = (page, limit, model, as, id) => {
     distinct: true,
   };
 };
-const cleanRows = (rows) => {
+const cleanProducts = (rows) => {
   return rows.map((item) => {
-    const { id, name, salePrice, mainImg, rating /* , categories */ } = item;
-    /* const cleanCategories = categories.map((element) => ({
-      id: element.id,
-      name: element.name,
-    })); */
+    const { id, name, salePrice, mainImg, rating } = item;
     return {
       id,
       name,
       salePrice,
       mainImg,
       rating,
-      /* categories: cleanCategories, */
     };
   });
 };
 
-module.exports = { paramsfindAndCountAll, cleanRows };
+module.exports = { paramsfindAndCountAll, cleanProducts };
