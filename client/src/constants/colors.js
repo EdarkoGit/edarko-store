@@ -1,0 +1,11 @@
+export const yellow = "#FBF37C";
+export const darkYellow = "#fec62e";
+export const blue = "#90b4ee";
+export const shinyBlue = "#157fff";
+export const black = "#151515";
+export const darkBlack = "#222222";
+export const rojo = "#f32d38";
+export const lightBlack = "#202020";
+export const lightBlue = "#eaf2fc";
+export const backgroundWhite = "#f5f5f7";
+export const backgroundGray = "#e2e2e2";
