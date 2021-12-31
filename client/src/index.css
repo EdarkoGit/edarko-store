@@ -4,6 +4,9 @@
 html {
   font-size: 62.5%;
 }
+body {
+  font-size: 1.8rem;
+}
 li {
   list-style: none;
 }
