@@ -1,6 +1,6 @@
 import styled from "styled-components";
 //styledComponent reciclado de otro proyecto,tiene estilos independientes.
-export const BtnStyled = styled.button`
+export const Btn = styled.button`
   background-color: ${({ backgroundColor }) => backgroundColor || "#F42C37"};
   width: ${({ width }) => width || "auto"};
   color: ${({ color }) => color || "white"};

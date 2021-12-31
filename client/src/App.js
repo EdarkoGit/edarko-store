@@ -6,6 +6,7 @@ import Catalogue from "./components/pages/catalogue/Catalogue";
 import Contact from "./components/pages/contact/Contact";
 import Trolley from "./components/pages/trolley/Trolley";
 import Header from "./components/layouts/header/Header";
+import Detail from "./components/Detail/Detail";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/catalogue" element={<Catalogue />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/trolley" element={<Trolley />} />
+        <Route path="/detail/:id" element={<Detail />} />
       </Routes>
     </AppStyle>
   );

@@ -6,6 +6,9 @@ import { getProducts } from "../../redux/actions/products";
 const Paged = () => {
   const dispatch = useDispatch();
   const count = useSelector((state) => state.products.paged.count);
+  const productsByPage = useSelector(
+    (state) => state.products.paged.productsByPage
+  );
   const handlePagedClick = ({ selected }) => {
     dispatch(getProducts(selected));
   };
@@ -14,7 +17,7 @@ const Paged = () => {
       previousLabel="anterior"
       nextLabel="siguiente"
       breakLabel="..."
-      pageCount={count ? Math.ceil(count / 3) : null}
+      pageCount={count ? Math.ceil(count / productsByPage) : null}
       marginPagesDisplayed={2}
       pageRangeDisplayed={2}
       onPageChange={handlePagedClick}
