@@ -1,4 +1,4 @@
-import "./App.css";
+import { AppStyle } from "./AppStyle";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/pages/home/Home";
 import Shop from "./components/pages/shop/Shop";
@@ -9,7 +9,7 @@ import Header from "./components/layouts/header/Header";
 
 function App() {
   return (
-    <div className="App">
+    <AppStyle className="App">
       <Header />
       <Routes>
         <Route path="" element={<Home />} />
@@ -18,7 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/trolley" element={<Trolley />} />
       </Routes>
-    </div>
+    </AppStyle>
   );
 }
 
