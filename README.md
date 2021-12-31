@@ -72,7 +72,7 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 - [ ] **GET /products**:
 
   - Obtener un listado de los products
-  - debe responder solo con los datos necesarios para una primera vista (name, imagen principal, precio) y id.
+  - Debe responder solo con los datos necesarios para una primera vista (name, imagen principal, precio,rating) y id.
 
 - [ ] **GET /products?name="..."**:
 
@@ -81,8 +81,7 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
 - [ ] **GET /products/{idProduct}**:
 
-  - Obtener el detalle de un producto en particular (fullData)
-  - Incluir las categories asociadas
+  - Obtener el detalle de un producto en particular (solo datos necesarios para la ruta detalle del front),
   - Incluir imagenes asociadas, en caso que tenga.
 
 - [ ] **GET /categories**:
@@ -91,15 +90,15 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
 #### Frontend
 
-Se debe desarrollar una aplicación de React/Redux que contenga las siguientes pantallas/rutas.
+Se debe desarrollar una aplicación de React/Redux que contenga las siguientes rutas.
 
 **Pagina inicial**: /
 
-**Ruta para comprar productos**: /store
+**Ruta principal**: /home
 debería contener:
 
 - [ ] form de búsqueda para encontrar productos por nombre
-- [ ] Área donde se verá el listado de productos (paginado). Deberá mostrar su:
+- [ ] Área donde se verá el listado de productos (paginados). Deberá mostrar su:
   - Nombre
   - Imagen principal
   - Precio

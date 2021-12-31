@@ -1,4 +1,4 @@
-import { reducer } from "../reducer/index";
+import { rootReducer } from "../reducers/rootReducer";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 const composeEnhancers =
@@ -7,6 +7,6 @@ const composeEnhancers =
   compose;
 
 export const store = createStore(
-  reducer,
+  rootReducer,
   composeEnhancers(applyMiddleware(thunk))
 );

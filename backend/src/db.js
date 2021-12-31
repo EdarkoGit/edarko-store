@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { Sequelize } = require("sequelize");
+const { Sequelize, Op } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
@@ -52,13 +52,18 @@ Product.belongsToMany(Category, {
   timestamps: false,
 });
 Category.belongsToMany(Product, {
-  as: "categories",
   through: "ProductCategory",
   timestamps: false,
 });
 
-Product.belongsToMany(Image, { through: "ProductImage", timestamps: false });
-Image.belongsToMany(Product, { through: "ProductImage", timestamps: false });
+Product.belongsToMany(Image, {
+  through: "ProductImage",
+  timestamps: false,
+});
+Image.belongsToMany(Product, {
+  through: "ProductImage",
+  timestamps: false,
+});
 
 Product.belongsToMany(Supplier, { through: "ProductSupplier" });
 Supplier.belongsToMany(Product, { through: "ProductSupplier" });
@@ -78,4 +83,5 @@ Product.belongsToMany(Order, { through: OrderDetail });
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product } = require('./db.js');
   conn: sequelize, // para importart la conexión { conn } = require('./db.js');
+  Op,
 };
