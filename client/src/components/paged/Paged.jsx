@@ -1,20 +1,23 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
 import { useDispatch, useSelector } from "react-redux";
-import { handlePagedClick } from "./handlePagedClick";
+import { getProducts } from "../../redux/actions/products";
 
 const Paged = () => {
   const dispatch = useDispatch();
   const count = useSelector((state) => state.products.paged.count);
+  const handlePagedClick = ({ selected }) => {
+    dispatch(getProducts(selected));
+  };
   return (
     <ReactPaginate
       previousLabel="anterior"
       nextLabel="siguiente"
       breakLabel="..."
-      pageCount={count}
+      pageCount={count ? Math.ceil(count / 3) : null}
       marginPagesDisplayed={2}
       pageRangeDisplayed={2}
-      onPageChange={({ selected }) => handlePagedClick(selected, dispatch)}
+      onPageChange={handlePagedClick}
       containerClassName="paged"
       pageClassName="paged-item"
       pageLinkClassName="page-item-link"

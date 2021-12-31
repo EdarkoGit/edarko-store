@@ -70,7 +70,7 @@ products.post("/", async (req, res, next) => {
 });
 
 products.get("/", async (req, res, next) => {
-  const productsByPage = 2;
+  const productsByPage = 3;
   const page = req.query.page || 0;
   const { category, name } = req.query;
   try {
