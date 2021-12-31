@@ -90,15 +90,15 @@ Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
 #### Frontend
 
-Se debe desarrollar una aplicación de React/Redux que contenga las siguientes pantallas/rutas.
+Se debe desarrollar una aplicación de React/Redux que contenga las siguientes rutas.
 
 **Pagina inicial**: /
 
-**Ruta para comprar productos**: /store
+**Ruta principal**: /home
 debería contener:
 
 - [ ] form de búsqueda para encontrar productos por nombre
-- [ ] Área donde se verá el listado de productos (paginado). Deberá mostrar su:
+- [ ] Área donde se verá el listado de productos (paginados). Deberá mostrar su:
   - Nombre
   - Imagen principal
   - Precio
