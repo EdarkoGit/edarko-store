@@ -1,5 +1,5 @@
 import React from "react";
-import { DesktopStyle } from "./style";
+import { LinkDesktopStyle } from "./style";
 import { FaBars } from "react-icons/fa";
 import { renderLinks } from "../services";
 
@@ -10,19 +10,16 @@ const listLinks = [
   { path: "/contact", content: "Contacto" },
 ];
 
-const Desktop = ({ width, handleCollapseClick }) => {
+const LinkDesktop = ({ width, handleCollapseClick }) => {
   return (
-    <DesktopStyle>
+    <LinkDesktopStyle>
       {width > 0 && width < 640 ? (
         <FaBars onClick={handleCollapseClick} color="white" />
       ) : (
-        <>
-          {renderLinks(listLinks)}
-          <div className="itemText">Categorias</div>
-        </>
+        <>{renderLinks(listLinks)}</>
       )}
-    </DesktopStyle>
+    </LinkDesktopStyle>
   );
 };
 
-export default Desktop;
+export default LinkDesktop;

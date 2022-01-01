@@ -1,3 +1,3 @@
 import styled from "styled-components";
 
-export const NavbarStyle = styled.nav``;
+export const NavbarStyle = styled.section``;
