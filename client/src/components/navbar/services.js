@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 
-export const liWithLink = (path, content) => {
-  return (
-    <li>
-      <Link to={path}>{content}</Link>
-    </li>
-  );
+export const renderLinks = (listLinks) => {
+  return listLinks.map((item) => {
+    const { path, content } = item;
+    return (
+      <Link key={content} className="itemText" to={path}>
+        {content}
+      </Link>
+    );
+  });
 };
