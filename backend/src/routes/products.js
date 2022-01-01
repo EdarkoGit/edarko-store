@@ -70,7 +70,7 @@ products.post("/", async (req, res, next) => {
 });
 
 products.get("/", async (req, res, next) => {
-  const productsByPage = 2;
+  const productsByPage = 10;
   const page = req.query.page || 0;
   const { category, name } = req.query;
   try {
@@ -93,7 +93,7 @@ products.get("/", async (req, res, next) => {
       const products = cleanProducts(rows);
       res.json(
         products.length
-          ? { page, count, products }
+          ? { page, count, products, productsByPage }
           : { msg: "Not found products" }
       );
     }
