@@ -10,7 +10,6 @@ const {
 
 products.post("/", async (req, res, next) => {
   const {
-    id,
     name,
     description,
     purchasePrice,
@@ -27,9 +26,8 @@ products.post("/", async (req, res, next) => {
       return res.json({ msg: "One of the categories does not exist" });
     }
     const [product, created] = await Product.findOrCreate({
-      where: { id },
+      where: { name },
       defaults: {
-        name,
         description,
         purchasePrice,
         salePrice,
