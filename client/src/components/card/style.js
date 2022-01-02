@@ -5,15 +5,14 @@ export const CardStyle = styled(Link)`
   display: grid;
   justify-items: start;
   align-items: center;
-  gap: 10px;
-  width: 300px;
+  gap: 15px;
   height: 500px;
-  padding: 8px;
-  box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+  padding: 15px;
   transition: transform 0.8s ease;
   color: #333;
   picture {
-    height: 250px;
+    height: 300px;
+    overflow: hidden;
   }
   &:hover {
     transform: scale(1.05);
