@@ -70,7 +70,7 @@ products.post("/", async (req, res, next) => {
 products.get("/", async (req, res, next) => {
   const productsByPage = 5;
   const page = req.query.page || 0;
-  const { category, name } = req.query;
+  const { category, name, typeOrder } = req.query;
   try {
     if (name) {
       const { count, rows } = await Product.findAndCountAll({
@@ -78,6 +78,10 @@ products.get("/", async (req, res, next) => {
         offset: page * productsByPage,
         limit: productsByPage,
         where: { name: { [Op.iLike]: `%${name}%` } },
+        order:
+          typeOrder === "DESC"
+            ? [["salePrice", "DESC"]]
+            : [["salePrice", "ASC"]],
       });
       const products = cleanProducts(rows);
       res.json(
@@ -98,7 +102,8 @@ products.get("/", async (req, res, next) => {
           productsByPage,
           Category,
           "categories",
-          category
+          category,
+          typeOrder
         )
       );
       const products = cleanProducts(rows);
