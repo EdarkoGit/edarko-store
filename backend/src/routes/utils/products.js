@@ -12,7 +12,7 @@ const paramsfindAndCountAll = (page, limit, model, as, id, typeOrder) => {
     ],
     distinct: true,
     order:
-      typeOrder === "DESC" ? [["salePrice", "DESC"]] : [["salePrice", "ASC"]],
+      typeOrder === "desc" ? [["salePrice", "DESC"]] : [["salePrice", "ASC"]],
   };
 };
 const cleanProducts = (rows) => {
