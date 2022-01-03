@@ -1,0 +1,1 @@
+export const SET_WHAT_RENDER_SHOP = "SET_WHAT_RENDER_SHOP";

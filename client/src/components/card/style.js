@@ -6,7 +6,7 @@ export const CardStyle = styled(Link)`
   justify-items: start;
   align-items: center;
   gap: 15px;
-  height: 500px;
+  height: 520px;
   padding: 15px;
   transition: transform 0.8s ease;
   color: #333;
