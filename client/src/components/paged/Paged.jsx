@@ -11,6 +11,7 @@ const Paged = () => {
   );
   const nameProduct = useSelector((state) => state.forms.nameProduct);
   const handlePagedClick = ({ selected }) => {
+    console.log(selected);
     dispatch(getProducts(selected, nameProduct ? nameProduct : null));
   };
   return (
@@ -23,12 +24,13 @@ const Paged = () => {
       pageRangeDisplayed={2}
       onPageChange={handlePagedClick}
       containerClassName="paged"
-      pageClassName="paged-item"
+      pageClassName="paged-item paged-numbers"
       pageLinkClassName="page-item-link"
       previousClassName="paged-item"
       nextClassName="paged-item"
       breakClassName="paged-item"
       forcePage={page ? parseInt(page) : null}
+      activeClassName="pageActive"
     />
   );
 };
