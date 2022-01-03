@@ -68,7 +68,7 @@ products.post("/", async (req, res, next) => {
 });
 
 products.get("/", async (req, res, next) => {
-  const productsByPage = 10;
+  const productsByPage = 5;
   const page = req.query.page || 0;
   const { category, name } = req.query;
   try {

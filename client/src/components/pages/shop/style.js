@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { blue } from "../../../constants/colors";
+import { blue, lightBlack } from "../../../constants/colors";
 
 export const ShopStyle = styled.div`
   .paged {
@@ -7,14 +7,14 @@ export const ShopStyle = styled.div`
     justify-content: center;
     align-items: center;
     gap: 5px;
-    .paged-item {
-      padding: 15px 15px 10px 15px;
+
+    .page-item-link {
+      padding: 15px;
       text-align: center;
     }
     .pageActive {
       background-color: ${blue};
-    }
-    .paged-numbers {
+      box-shadow: 0 0 0 0.5px ${lightBlack};
     }
   }
 `;
