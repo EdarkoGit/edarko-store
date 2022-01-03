@@ -2,11 +2,17 @@ import { URL_BASE_BACKEND } from "../../constants/urls";
 import { SET_PRODUCTS } from "../constants/products";
 import { actionGenerator, axiosGet } from "./services";
 
-export const getProducts = (page = 0) => {
+export const getProducts = (page = 0, name) => {
   return async (dispatch) => {
-    const products = await axiosGet(
-      `${URL_BASE_BACKEND}/products?page=${page}`
-    );
-    dispatch(actionGenerator(SET_PRODUCTS, products));
+    try {
+      const products = await axiosGet(
+        name
+          ? `${URL_BASE_BACKEND}/products?page=${page}&&name=${name}`
+          : `${URL_BASE_BACKEND}/products?page=${page}`
+      );
+      dispatch(actionGenerator(SET_PRODUCTS, products));
+    } catch (error) {
+      console.log(error);
+    }
   };
 };

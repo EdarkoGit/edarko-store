@@ -1,7 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
       "name": "Notebook Latitude",
       "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
       "mainImg": "https://i.ebayimg.com/images/g/De0AAOSwHIRgsaTu/s-l1600.png",
@@ -19,7 +18,6 @@
       "rating": 0
     },
     {
-      "id": "2",
       "name": "Lenovo Tab M8 Tablet",
       "description": "Stunning performance and stylish design combine in this quick, powerful Android tablet, powered by a Quad-Core, 2.0 GHz processor and Android 9 Pie /nThe modern, refined look and feel are accentuated by the full metal cover and 82% panel-to-body ratio  /nThe stunning 8 HD (1280 x 800) display brings you a crisper and brighter image, so you can watch your favorite movies and shows without missing a detail",
       "mainImg": "https://m.media-amazon.com/images/I/716LsyDg3fL._AC_SX679_.jpg",
@@ -37,7 +35,6 @@
       "rating": 0
     },
     {
-      "id": "3",
       "name": "Auriculares Bluetooth",
       "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
       "mainImg": "https://i.ebayimg.com/images/g/digAAOSwaXlhre44/s-l1600.jpg",
@@ -55,7 +52,6 @@
       "rating": 0
     },
     {
-      "id": "4",
       "name": "Teclado PC multicolor",
       "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
       "mainImg": "https://i.ebayimg.com/images/g/hR8AAOSwkfxhpKtf/s-l1600.jpg",
@@ -73,7 +69,6 @@
       "rating": 0
     },
     {
-      "id": "5",
       "name": "CPU PC Gamer ",
       "description": "Laptop para juegos Dell Latitude Business Windows 10 Intel Core i5 16GB Ram 2TB SSD",
       "mainImg": "https://i.ebayimg.com/images/g/w68AAOSwFzRhq5Qo/s-l1600.jpg",
@@ -91,7 +86,6 @@
       "rating": 0
     },
     {
-      "id": "6",
       "name": "2021 HP 14 inch HD Laptop",
       "description": "AMD Athlon Mobile Processor with Radeon Graphics. AMD Athlon Silver 3050U (2.3 GHz, up to 3.2 GHz). Get more done faster on a reliable laptop that can keep up with your everyday tasks.14-inch diagonal HD, SVA, anti-glare, micro-edge, WLED-backlit, (1366 x 768) Display. Gives you the space and clarity you need to get your work done. Weighs 3.24 lbs. and measures 0.8 thin Ultrathin and ultralight for maximum portability, featuring a smaller screen size.RAM is upgraded to 16GB DDR4 SDRAM for multitasking Adequate high-bandwidth RAM to smoothly run multiple applications and browser tabs all at once. 512GB solid state drive (SSD) While offering less storage space than a hard drive, a flash-based SSD has no moving parts, resulting in faster start-up times and data access, no noise, and reduced heat production and power draw on the battery.Up to 10 Hours of battery life means you can transition from morning meetings to evening entertainment without plugging in.",
       "mainImg": "https://m.media-amazon.com/images/I/81C7E9Fp7yL._AC_SX466_.jpg",
@@ -111,7 +105,6 @@
       "rating": 0
     },
     {
-      "id": "7",
       "name": "HP 2021 Newest 14in HD Laptop Light-Weight",
       "description": "✔【14 HD Display】14 HD(1366 x 768) Display with micro-edge bezel design, WLED-backlit, BrightView, Enjoy your entertainment with the great quality and high-definition detail of 1 million pixels /n✔【AMD Athlon Mobile Processor with Radeon Graphics】 AMD Athlon Silver 3050U (2.3 GHz, up to 3.2 GHz). This laptop is powered by AMD which gives good performance with efficiency. It can also do simple gaming thanks to its integrated AMD Radeon graphics. /n✔【Upgrade to 8GB RAM】Substantial high-bandwidth RAM to smoothly run your games and photo- and video-editing applications, as well as multiple programs and browser tabs all at once. /n【Upgrade to 64GB emmc + 256GB SSD】Speedy solid-state drive for seanless performance and reliable multitasking, allows you to store a large number of files, improving the reading speed of large files, ensuring daily use and the speed of opening large files, reduce the time of application and file loading /n✔【Activate 1 Year MS office 365 & Win10 in S mode】(About switch to regular Win10, see the detail in Product description) Activate pre-installed Office: 1.Launch any Office app > 2.Start your activation by signing in with your Microsoft account(Create a account if you don't have one yet) > 3.Click Activate Office > 4.Sign in your account and follow the next prompts. > 5.Complete Step 1,2 and 3 > 6.Click on Refresh once Office is ready > 7.Open a document and accept the license agreement",
       "mainImg": "https://m.media-amazon.com/images/I/81NvTUBf9ZS._AC_SX466_.jpg",
@@ -127,6 +120,253 @@
       "salePrice": 469,
       "purchasePrice": 320,
       "stock": 10,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "ASUS VivoBook 15 Thin and Light Laptop",
+      "description": "15.6-inch FHD Display, AMD Quad Core R7-3700U CPU, 8GB DDR4 RAM, 512GB PCIe SSD, AMD Radeon Vega 10 Graphics, Fingerprint, Windows 10 Home, Slate Gray , F512DA-NH77",
+      "mainImg": "https://m.media-amazon.com/images/I/81fstJkUlaL._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/816ioPpcNEL._AC_SY450_.jpg"
+      ],
+      "suppliers": [{
+        "name": "martina",
+        "phone": 7772747,
+        "email": "martina@gmail.com"
+      }],
+      "categories": [6],
+      "salePrice": 895,
+      "purchasePrice": 200,
+      "stock": 10,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "Desktop PC Gamer Skytech Blaze 3.0",
+      "description": "Intel i5-11400F, RX 6600, 1TB NVME, 16G DDR4 3200, 120mm AIO, AC Wi-Fi, Windows 10 Home 64bit, white",
+      "mainImg": "https://m.media-amazon.com/images/I/81nBciZF-0L._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/81hMsMRooqL._AC_SY879_.jpg"
+      ],
+      "suppliers": [{
+        "name": "martina",
+        "phone": 7772747,
+        "email": "martina@gmail.com"
+      }],
+      "categories": [1],
+      "salePrice": 1399,
+      "purchasePrice": 1000,
+      "stock": 20,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "Skytech Gaming Archangel Desktop Computer for Gaming",
+      "description": "Ryzen 5 5600X 3.7GHz, RTX 3060 TI 8G, 1TB NVMe SSD, 16GB DDR4 3200MHz, RGB fans, Windows 10 Home 64bit, 802.11AC Wi-Fi, white",
+      "mainImg": "https://m.media-amazon.com/images/I/71pczXb2vaL._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/71hDxaPOPnL._AC_SY879_.jpg"
+      ],
+      "suppliers": [{
+        "name": "andrea",
+        "phone": 3411010,
+        "email": "andrea@gmail.com"
+      }],
+      "categories": [1],
+      "salePrice": 1699,
+      "purchasePrice": 1000,
+      "stock": 20,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "LG Smart TV OLED A1 Series 48 Integrated Alexa 4K",
+      "description": "60Hz refresh rate, 4K powered by ai, Dolby Cinema, WiSA Ready, game mode (OLED48A1PUA, 2021)",
+      "mainImg": "https://m.media-amazon.com/images/I/91UdRXFfirS._AC_SX466_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/61U2jBF5npS._AC_SX355_.jpg"
+      ],
+      "suppliers": [{
+        "name": "andrea",
+        "phone": 3411010,
+        "email": "andrea@gmail.com"
+      }],
+      "categories": [3],
+      "salePrice": 1200,
+      "purchasePrice": 950,
+      "stock": 15,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "65-inch Sony TV X85J: 4K Ultra HD LED Smart Google TV",
+      "description": "native refresh rate of 120HZ, Dolby Vision HDR and Alexa compatibility KD65X85J- model 2021",
+      "mainImg": "https://m.media-amazon.com/images/I/812wiz16nlL._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/81PRHCsCIlL._AC_SX466_.jpg"
+      ],
+      "suppliers": [{
+        "name": "andrea",
+        "phone": 3411010,
+        "email": "andrea@gmail.com"
+      }],
+      "categories": [3],
+      "salePrice": 1100,
+      "purchasePrice": 900,
+      "stock": 15,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "Samsung Electronics Tablet Android Galaxy Tab S7 FE 2021",
+      "description": "Big screen, big experience: A large 12.5-inch screen brings your content to life in brilliant color, whether indoors or out, making the Samsung Galaxy S7 FE a great tablet for studying time or a quick break from work. training",
+      "mainImg": "https://m.media-amazon.com/images/I/913nyCXkdrS._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/61yA3Ls+4US._AC_SY450_.jpg"
+      ],
+      "suppliers": [{
+        "name": "andrea",
+        "phone": 3411010,
+        "email": "andrea@gmail.com"
+      }],
+      "categories": [5],
+      "salePrice": 530,
+      "purchasePrice": 400,
+      "stock": 5,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "Apple iPhone 12 Pro",
+      "description": "Unlocked and compatible with any preferred carrier on GSM and CDMA networks (eg AT&T, T-Mobile, Sprint, Verizon, US Cellular, Cricket, Metro, Tracfone, Mint Mobile, etc.).",
+      "mainImg": "https://m.media-amazon.com/images/I/61kYwdMmD-L._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/51IS48kzwvL._AC_SY550_.jpg"
+      ],
+      "suppliers": [{
+        "name": "andrea",
+        "phone": 3411010,
+        "email": "andrea@gmail.com"
+      }],
+      "categories": [2],
+      "salePrice": 1400,
+      "purchasePrice": 1000,
+      "stock": 35,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "Samsung Galaxy S21 5G | Factory unlocked Android phone",
+      "description": "International version 5G Smartphone | Professional grade camera, 8K video, 64MP high resolution | 128GB, (SM-G991B/DS) (Phantom Violet)",
+      "mainImg": "https://m.media-amazon.com/images/I/71cb4T2yAeL._AC_SX522_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/61wmqK1hlRL._AC_SX425_.jpg"
+      ],
+      "suppliers": [{
+        "name": "edarko",
+        "phone": 1118899,
+        "email": "edarko@gmail.com"
+      }],
+      "categories": [2],
+      "salePrice": 825,
+      "purchasePrice": 550,
+      "stock": 45,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "Alienware 7.1 PC Gaming Headset",
+      "description": "Best-in-class custom-tuned 50mm 20Hz - 40kHz drivers for a high resolution audio experience  /n7. 1 Surround Sound featuring Signature Alien ware Immersive Audio   /nHybrid of plush memory foam, sports fabric and leatherette on the ear pads designed to achieve optimal cooling and comfort while enhancing noise isolation   /nIdeal clamp force ensures that there is no slippage during gameplay",
+      "mainImg": "https://m.media-amazon.com/images/I/712TaM-9wYL._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/71WucjWZrUL._AC_SX679_.jpg"
+      ],
+      "suppliers": [{
+        "name": "edarko",
+        "phone": 1118899,
+        "email": "edarko@gmail.com"
+      }],
+      "categories": [4],
+      "salePrice": 87,
+      "purchasePrice": 45,
+      "stock": 45,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "Spedal USB Streaming Webcam with Ring Light",
+      "description": "PREMIUM LIVE STREAMING SOLUTION SOFTWARE -With this streaming webcam you show your skills with superior clarity when you go live on Twitch and YouTube. Spedal camera software is a video stream adjustment software specially developed and designed for webcams. Customers can use the software to modify the Exposure/ Brightness / Resolution / Saturation / Contrast / Sharpness / PLF(HZ) / White Balance and more of the image in the process of using the camera",
+      "mainImg": "https://m.media-amazon.com/images/I/71n8b52KWDL._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/71jc4tto8qL._AC_SX679_.jpg"
+      ],
+      "suppliers": [{
+        "name": "edarko",
+        "phone": 1118899,
+        "email": "edarko@gmail.com"
+      }],
+      "categories": [4],
+      "salePrice": 45,
+      "purchasePrice": 20,
+      "stock": 25,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "Razer Wolverine Tournament Edition Officially Licensed Xbox One Controller",
+      "description": "Rapid-Fire Switch for Instant Actuation: Activiating Hair Trigger mode via a physical switch greatly reduces travel distance for the ultimate competitive edge  /n4 Remappable Multi Function Buttons: Comes with an additional 2 multi-function bumpers and 2 multi-function triggers",
+      "mainImg": "https://m.media-amazon.com/images/I/81fKtaySh1L._SX522_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/7123ke9WaUL._SX522_.jpg"
+      ],
+      "suppliers": [{
+        "name": "edarko",
+        "phone": 1118899,
+        "email": "edarko@gmail.com"
+      }],
+      "categories": [4],
+      "salePrice": 45,
+      "purchasePrice": 20,
+      "stock": 25,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "Razer Tartarus v2 Gaming Keypad",
+      "description": "High-Performance Mecha-Membrane Switches: Provides the tactile feedback of mechanical key press on a comfortable, soft-cushioned, membrane, rubber dome switch suitable for gaming /n32 Mecha-Membrane Keys for More Hotkeys and Actions: Perfect for gaming or integrating into creative workflows with fully programmable keys",
+      "mainImg": "https://m.media-amazon.com/images/I/71r3ktfakgL._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/713vwx2+XUL._AC_SX679_.jpg"
+      ],
+      "suppliers": [{
+        "name": "edarko",
+        "phone": 1118899,
+        "email": "edarko@gmail.com"
+      }],
+      "categories": [4],
+      "salePrice": 79,
+      "purchasePrice": 50,
+      "stock": 15,
+      "discount": 0,
+      "rating": 0
+    },
+    {
+      "name": "OnePlus Nord N200 | 5G Unlocked Android Smartphone U.S Version",
+      "description": "5G Enabled (5G service only available on T-Mobile and Google Fi) - Powered by the latest Qualcomm 5G chipset, the OnePlus Nord N200 5G allows you to download or stream your favorite TV shows, connect with your social media, and play online multiplayer at blazing fast speeds.",
+      "mainImg": "https://m.media-amazon.com/images/I/71DCZOdq92S._AC_SX679_.jpg",
+      "imgs": [
+        "https://m.media-amazon.com/images/I/71hCU6s3AWS._AC_SX679_.jpg"
+      ],
+      "suppliers": [{
+        "name": "edwin",
+        "phone": 3335544,
+        "email": "edwin@gmail.com"
+      }],
+      "categories": [2],
+      "salePrice": 155,
+      "purchasePrice": 100,
+      "stock": 90,
       "discount": 0,
       "rating": 0
     }

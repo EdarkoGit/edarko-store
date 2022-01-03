@@ -94,7 +94,7 @@ Se debe desarrollar una aplicación de React/Redux que contenga las siguientes r
 
 **Pagina inicial**: /
 
-**Ruta principal**: /home
+**Ruta principal**: /shop
 debería contener:
 
 - [ ] form de búsqueda para encontrar productos por nombre

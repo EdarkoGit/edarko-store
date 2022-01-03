@@ -10,7 +10,6 @@ const {
 
 products.post("/", async (req, res, next) => {
   const {
-    id,
     name,
     description,
     purchasePrice,
@@ -27,9 +26,8 @@ products.post("/", async (req, res, next) => {
       return res.json({ msg: "One of the categories does not exist" });
     }
     const [product, created] = await Product.findOrCreate({
-      where: { id },
+      where: { name },
       defaults: {
-        name,
         description,
         purchasePrice,
         salePrice,
@@ -75,11 +73,18 @@ products.get("/", async (req, res, next) => {
   const { category, name } = req.query;
   try {
     if (name) {
-      const rows = await Product.findAll({
+      const { count, rows } = await Product.findAndCountAll({
+        attributes: ["id", "name", "salePrice", "mainImg", "rating"],
+        offset: page * productsByPage,
+        limit: productsByPage,
         where: { name: { [Op.iLike]: `%${name}%` } },
       });
       const products = cleanProducts(rows);
-      res.json(products.length ? products : { msg: "Not found products" });
+      res.json(
+        products.length
+          ? { page, count, productsByPage, products }
+          : { msg: "Not found products" }
+      );
     } else {
       const { count, rows } = await Product.findAndCountAll(
         paramsfindAndCountAll(
@@ -93,7 +98,7 @@ products.get("/", async (req, res, next) => {
       const products = cleanProducts(rows);
       res.json(
         products.length
-          ? { page, count, products, productsByPage }
+          ? { page, count, productsByPage, products }
           : { msg: "Not found products" }
       );
     }

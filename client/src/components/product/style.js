@@ -13,4 +13,10 @@ export const ProductStyle = styled.section`
   @media (min-width: 1280px) {
     grid-template-columns: repeat(3, 1fr);
   }
+  @media (min-width: 1600px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 1920px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 `;
