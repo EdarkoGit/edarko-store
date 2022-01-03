@@ -68,33 +68,31 @@ products.post("/", async (req, res, next) => {
 });
 
 products.get("/", async (req, res, next) => {
-  const productsByPage = 5;
+  const productsByPage = 10;
   const page = req.query.page || 0;
   const { category, name, typeOrder } = req.query;
   try {
+    const hashOrder = {
+      desc: [["salePrice", "DESC"]],
+      asc: [["salePrice", "ASC"]],
+    };
     if (name) {
       const { count, rows } = await Product.findAndCountAll({
         attributes: ["id", "name", "salePrice", "mainImg", "rating"],
         offset: page * productsByPage,
         limit: productsByPage,
         where: { name: { [Op.iLike]: `%${name}%` } },
-        order:
-          typeOrder === "DESC"
-            ? [["salePrice", "DESC"]]
-            : [["salePrice", "ASC"]],
+        order: hashOrder[typeOrder] || [],
       });
       const products = cleanProducts(rows);
-      res.json(
-        products.length
-          ? {
-              page,
-              count,
-              productsByPage,
-              pageCount: Math.ceil(count / productsByPage),
-              products,
-            }
-          : { msg: "Not found products" }
-      );
+      const data = {
+        page,
+        count,
+        productsByPage,
+        pageCount: Math.ceil(count / productsByPage),
+        products,
+      };
+      res.json(products.length ? data : { msg: "Not found products" });
     } else {
       const { count, rows } = await Product.findAndCountAll(
         paramsfindAndCountAll(
@@ -103,21 +101,18 @@ products.get("/", async (req, res, next) => {
           Category,
           "categories",
           category,
-          typeOrder
+          hashOrder[typeOrder] || []
         )
       );
       const products = cleanProducts(rows);
-      res.json(
-        products.length
-          ? {
-              page,
-              count,
-              productsByPage,
-              pageCount: Math.ceil(count / productsByPage),
-              products,
-            }
-          : { msg: "Not found products" }
-      );
+      const data = {
+        page,
+        count,
+        productsByPage,
+        pageCount: Math.ceil(count / productsByPage),
+        products,
+      };
+      res.json(products.length ? data : { msg: "Not found products" });
     }
   } catch (error) {
     next(error);

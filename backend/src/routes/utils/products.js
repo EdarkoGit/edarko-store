@@ -1,4 +1,4 @@
-const paramsfindAndCountAll = (page, limit, model, as, id, typeOrder) => {
+const paramsfindAndCountAll = (page, limit, model, as, id, hashOrder) => {
   return {
     attributes: ["id", "name", "salePrice", "mainImg", "rating"],
     offset: page * limit,
@@ -11,8 +11,7 @@ const paramsfindAndCountAll = (page, limit, model, as, id, typeOrder) => {
       },
     ],
     distinct: true,
-    order:
-      typeOrder === "desc" ? [["salePrice", "DESC"]] : [["salePrice", "ASC"]],
+    order: hashOrder,
   };
 };
 const cleanProducts = (rows) => {
