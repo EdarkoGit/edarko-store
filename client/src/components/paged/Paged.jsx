@@ -6,12 +6,9 @@ import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 const Paged = () => {
   const dispatch = useDispatch();
-  const { count, page, productsByPage } = useSelector(
-    (state) => state.products.paged
-  );
+  const { pageCount, page } = useSelector((state) => state.products.paged);
   const nameProduct = useSelector((state) => state.forms.nameProduct);
   const handlePagedClick = ({ selected }) => {
-    console.log(selected);
     dispatch(getProducts(selected, nameProduct ? nameProduct : null));
   };
   return (
@@ -19,7 +16,7 @@ const Paged = () => {
       previousLabel={<FaAngleDoubleLeft />}
       nextLabel={<FaAngleDoubleRight />}
       breakLabel="..."
-      pageCount={count ? Math.ceil(count / productsByPage) : null}
+      pageCount={pageCount ? pageCount : 0}
       marginPagesDisplayed={2}
       pageRangeDisplayed={2}
       onPageChange={handlePagedClick}
@@ -29,7 +26,7 @@ const Paged = () => {
       previousClassName="paged-item"
       nextClassName="paged-item"
       breakClassName="paged-item"
-      forcePage={page ? parseInt(page) : null}
+      forcePage={parseInt(page)}
       activeClassName="pageActive"
     />
   );

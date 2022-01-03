@@ -82,7 +82,13 @@ products.get("/", async (req, res, next) => {
       const products = cleanProducts(rows);
       res.json(
         products.length
-          ? { page, count, productsByPage, products }
+          ? {
+              page,
+              count,
+              productsByPage,
+              pageCount: Math.ceil(count / productsByPage),
+              products,
+            }
           : { msg: "Not found products" }
       );
     } else {
@@ -98,7 +104,13 @@ products.get("/", async (req, res, next) => {
       const products = cleanProducts(rows);
       res.json(
         products.length
-          ? { page, count, productsByPage, products }
+          ? {
+              page,
+              count,
+              productsByPage,
+              pageCount: Math.ceil(count / productsByPage),
+              products,
+            }
           : { msg: "Not found products" }
       );
     }

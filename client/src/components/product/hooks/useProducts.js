@@ -11,6 +11,6 @@ export const useProducts = () => {
       return dispatch(getProducts(0, nameProduct));
     }
     dispatch(getProducts());
-  }, [dispatch]);
+  }, [nameProduct, dispatch]);
   return products;
 };
