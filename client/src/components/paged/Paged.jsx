@@ -2,20 +2,21 @@ import React from "react";
 import ReactPaginate from "react-paginate";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/actions/products";
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 const Paged = () => {
   const dispatch = useDispatch();
-  const count = useSelector((state) => state.products.paged.count);
-  const productsByPage = useSelector(
-    (state) => state.products.paged.productsByPage
+  const { count, page, productsByPage } = useSelector(
+    (state) => state.products.paged
   );
+  const nameProduct = useSelector((state) => state.forms.nameProduct);
   const handlePagedClick = ({ selected }) => {
-    dispatch(getProducts(selected));
+    dispatch(getProducts(selected, nameProduct ? nameProduct : null));
   };
   return (
     <ReactPaginate
-      previousLabel="anterior"
-      nextLabel="siguiente"
+      previousLabel={<FaAngleDoubleLeft />}
+      nextLabel={<FaAngleDoubleRight />}
       breakLabel="..."
       pageCount={count ? Math.ceil(count / productsByPage) : null}
       marginPagesDisplayed={2}
@@ -27,6 +28,7 @@ const Paged = () => {
       previousClassName="paged-item"
       nextClassName="paged-item"
       breakClassName="paged-item"
+      forcePage={page ? parseInt(page) : null}
     />
   );
 };

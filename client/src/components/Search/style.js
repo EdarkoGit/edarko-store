@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const SearchStyle = styled.form`
   margin-bottom: 20px;
   display: grid;
