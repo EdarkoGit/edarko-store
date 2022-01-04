@@ -1,7 +1,7 @@
 import styled from "styled-components";
 //styledComponent reciclado de otro proyecto,tiene estilos independientes.
 export const Btn = styled.button`
-  background-color: ${({ backgroundColor }) => backgroundColor || "#F42C37"};
+  background-color: ${({ backgroundColor }) => backgroundColor || "#90b4ee"};
   width: ${({ width }) => width || "auto"};
   color: ${({ color }) => color || "white"};
   text-align: ${({ textAlign }) => textAlign || "center"};

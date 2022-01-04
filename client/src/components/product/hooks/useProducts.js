@@ -5,8 +5,19 @@ import { getProducts } from "../../../redux/actions/products";
 export const useProducts = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.paged.products);
+  const nameProduct = useSelector((state) => state.forms.nameProduct);
+  const whatRenderShop = useSelector((state) => state.flags.whatRenderShop);
+
   useEffect(() => {
-    dispatch(getProducts());
-  }, [dispatch]);
+    const whatRender = {
+      name: function () {
+        dispatch(getProducts(0, nameProduct));
+      },
+      all: function () {
+        dispatch(getProducts());
+      },
+    };
+    whatRender[whatRenderShop]();
+  }, [nameProduct, whatRenderShop, dispatch]);
   return products;
 };
