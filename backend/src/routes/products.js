@@ -2,11 +2,8 @@ const { Router } = require("express");
 const products = Router();
 const { Product, Image, Supplier, Category, Op } = require("../db");
 const { validateExistsCategories } = require("./utils/utils");
-const {
-  paramsfindAndCountAll,
-  cleanProducts,
-  cleanOneProduct,
-} = require("./utils/products");
+const { cleanProducts, cleanOneProduct } = require("./utils/products");
+const { productsByPage } = require("../constants");
 
 products.post("/", async (req, res, next) => {
   const {
@@ -68,21 +65,26 @@ products.post("/", async (req, res, next) => {
 });
 
 products.get("/", async (req, res, next) => {
-  const productsByPage = 10;
   const page = req.query.page || 0;
   const { category, name, typeOrder } = req.query;
+
+  const hashOrder = {
+    desc: [["salePrice", "DESC"]],
+    asc: [["salePrice", "ASC"]],
+  };
+
+  const basicProps = {
+    attributes: ["id", "name", "salePrice", "mainImg", "rating"],
+    offset: page * productsByPage,
+    limit: productsByPage,
+    order: hashOrder[typeOrder] || [],
+  };
+
   try {
-    const hashOrder = {
-      desc: [["salePrice", "DESC"]],
-      asc: [["salePrice", "ASC"]],
-    };
     if (name) {
       const { count, rows } = await Product.findAndCountAll({
-        attributes: ["id", "name", "salePrice", "mainImg", "rating"],
-        offset: page * productsByPage,
-        limit: productsByPage,
+        ...basicProps,
         where: { name: { [Op.iLike]: `%${name}%` } },
-        order: hashOrder[typeOrder] || [],
       });
       const products = cleanProducts(rows);
       const data = {
@@ -94,16 +96,17 @@ products.get("/", async (req, res, next) => {
       };
       res.json(products.length ? data : { msg: "Not found products" });
     } else {
-      const { count, rows } = await Product.findAndCountAll(
-        paramsfindAndCountAll(
-          page,
-          productsByPage,
-          Category,
-          "categories",
-          category,
-          hashOrder[typeOrder] || []
-        )
-      );
+      const { count, rows } = await Product.findAndCountAll({
+        ...basicProps,
+        include: [
+          {
+            model: Category,
+            as: "categories",
+            where: category || {},
+          },
+        ],
+        distinct: true,
+      });
       const products = cleanProducts(rows);
       const data = {
         page,

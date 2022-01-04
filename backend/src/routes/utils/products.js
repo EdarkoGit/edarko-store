@@ -1,19 +1,3 @@
-const paramsfindAndCountAll = (page, limit, model, as, id, hashOrder) => {
-  return {
-    attributes: ["id", "name", "salePrice", "mainImg", "rating"],
-    offset: page * limit,
-    limit,
-    include: [
-      {
-        model,
-        as,
-        where: id ? { id } : {},
-      },
-    ],
-    distinct: true,
-    order: hashOrder,
-  };
-};
 const cleanProducts = (rows) => {
   return rows.map((item) => {
     const { id, name, salePrice, mainImg, rating } = item;
@@ -51,4 +35,4 @@ const cleanOneProduct = (product) => {
   };
 };
 
-module.exports = { paramsfindAndCountAll, cleanProducts, cleanOneProduct };
+module.exports = { cleanProducts, cleanOneProduct };
