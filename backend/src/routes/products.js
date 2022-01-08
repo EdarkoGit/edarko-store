@@ -65,22 +65,19 @@ products.post("/", async (req, res, next) => {
 });
 
 products.get("/", async (req, res, next) => {
-  const page = req.query.page || 0;
-  const { category, name, typeOrder } = req.query;
-
-  const hashOrder = {
-    desc: [["salePrice", "DESC"]],
-    asc: [["salePrice", "ASC"]],
-  };
-
-  const basicProps = {
-    attributes: ["id", "name", "salePrice", "mainImg", "rating"],
-    offset: page * productsByPage,
-    limit: productsByPage,
-    order: hashOrder[typeOrder] || [],
-  };
-
   try {
+    const page = req.query.page || 0;
+    const { category, name, typeOrder } = req.query;
+    const hashOrder = {
+      desc: [["salePrice", "DESC"]],
+      asc: [["salePrice", "ASC"]],
+    };
+    const basicProps = {
+      attributes: ["id", "name", "salePrice", "mainImg", "rating"],
+      offset: page * productsByPage,
+      limit: productsByPage,
+      order: hashOrder[typeOrder] || [],
+    };
     if (name) {
       const { count, rows } = await Product.findAndCountAll({
         ...basicProps,
@@ -97,14 +94,14 @@ products.get("/", async (req, res, next) => {
       res.json(products.length ? data : { msg: "Not found products" });
     } else {
       const { count, rows } = await Product.findAndCountAll({
-        ...basicProps,
         include: [
           {
             model: Category,
             as: "categories",
-            where: category || {},
+            where: category ? { id: category } : {},
           },
         ],
+        ...basicProps,
         distinct: true,
       });
       const products = cleanProducts(rows);
