@@ -5,8 +5,7 @@ const URL_CATEGORIES = "http://localhost:3001/categories";
 const URL_PRODUCTS = "http://localhost:3001/products";
 
 const loadMockCategories = async () => {
-  const result = await axios.post(URL_CATEGORIES, categories); // llena con data en la tabla o model Category de nuestra D.B
-  return result;
+  const result = await axios.post(URL_CATEGORIES, categories);
 };
 const loadMockProducts = async () => {
   try {
