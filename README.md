@@ -2,7 +2,7 @@
     <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
 </p>
 
-# Individual Project - eCommerceEdar
+# Proyect edarko-store
 
 <p align="right">
   <img height="200" src="./e-commerce.jpg" />
@@ -19,9 +19,9 @@
 
 El proyecto tendrá una duración máxima de cuatro semanas.
 
-## BoilerPlate
+## Proyecto
 
-El boilerplate cuenta con dos carpetas: `backend` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
+El proyecto cuenta con dos carpetas: `backend` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
 
 Será necesario que creen desde psql una base de datos llamada `edarkostore`, un archivo .env dentro de backend y setearlo acorde a sus propios datos ej:
 
