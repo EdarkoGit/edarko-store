@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const suppliers = Router();
 
-const { Supplier } = require("../db");
+const { Supplier } = require("../../db");
 
 suppliers.post("/", async (req, res, next) => {
   const { suppliers } = req.body;

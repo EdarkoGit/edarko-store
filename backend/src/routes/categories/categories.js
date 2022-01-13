@@ -1,13 +1,13 @@
 const { Router } = require("express");
 const categories = Router();
 
-const { Category } = require("../db");
+const { Category } = require("../../db");
 
 categories.post("/", async (req, res, next) => {
   const { categories } = req.body;
   try {
     for (let i = 0; i < categories.length; i++) {
-      const [category, created] = await Category.findOrCreate({
+      await Category.findOrCreate({
         where: { name: categories[i] },
       });
     }
