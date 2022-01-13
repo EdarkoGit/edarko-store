@@ -1,9 +1,11 @@
 const { Router } = require("express");
 const products = Router();
-const { Product, Image, Supplier, Category, Op } = require("../db");
-const { validateExistsCategories } = require("./utils/utils");
-const { cleanProducts, cleanOneProduct } = require("./utils/products");
-const { productsByPage } = require("../constants");
+const { Product, Image, Supplier, Category, Op } = require("../../db");
+const { isCategories } = require("../../utils/isCategory");
+const { cleanProducts, cleanOneProduct } = require("./utils/clean");
+const { productsByPage } = require("../../constants");
+const { createImages } = require("./utils/createImages");
+const { createSuppliers } = require("./utils/createSuppliers");
 
 products.post("/", async (req, res, next) => {
   const {
@@ -19,7 +21,8 @@ products.post("/", async (req, res, next) => {
     categories,
   } = req.body;
   try {
-    if (!(await validateExistsCategories(Category, categories))) {
+    const isCategory = await isCategories(Category, categories);
+    if (!isCategory) {
       return res.json({ msg: "One of the categories does not exist" });
     }
     const [product, created] = await Product.findOrCreate({
@@ -34,24 +37,8 @@ products.post("/", async (req, res, next) => {
       },
     });
     if (created) {
-      const intancesImage = [];
-      const intancesSupplier = [];
-      for (let i = 0; i < imgs.length; i++) {
-        const [img, created] = await Image.findOrCreate({
-          where: { url: imgs[i] },
-        });
-        intancesImage.push(img);
-      }
-      for (let i = 0; i < suppliers.length; i++) {
-        const [supplier, created] = await Supplier.findOrCreate({
-          where: { email: suppliers[i].email },
-          defaults: {
-            phone: suppliers[i].phone,
-            name: suppliers[i].name,
-          },
-        });
-        intancesSupplier.push(supplier);
-      }
+      const intancesImage = await createImages(Image, imgs);
+      const intancesSupplier = await createSuppliers(Supplier, suppliers);
       await product.setImages(intancesImage);
       await product.setSuppliers(intancesSupplier);
       await product.setCategories(categories);

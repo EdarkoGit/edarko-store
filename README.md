@@ -10,8 +10,8 @@
 
 ## Objetivos del Proyecto
 
-- Construir una App utlizando React, Redux, Node y Sequelize.
-- Afirmar y conectar los conceptos aprendidos en la carrera.
+- Construir una App utlizando React, Redux, Styled-components, Nodejs y Sequelize-Postgres.
+- Afirmar y conectar los conceptos aprendidos en el bootcamp.
 - Aprender mejores prácticas.
 - Aprender y practicar nuevos conceptos impresindibles para todas las funcionalidades de la e-commerce.
 

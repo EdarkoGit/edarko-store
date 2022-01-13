@@ -1,4 +1,4 @@
-const validateExistsCategories = async (model, arr) => {
+const isCategories = async (model, arr) => {
   let flagExists = true;
   for (let i = 0; i < arr.length; i++) {
     const result = await model.findByPk(arr[i]);
@@ -7,4 +7,4 @@ const validateExistsCategories = async (model, arr) => {
   return flagExists;
 };
 
-module.exports = { validateExistsCategories };
+module.exports = { isCategories };
