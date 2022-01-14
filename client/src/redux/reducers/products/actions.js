@@ -1,7 +1,7 @@
-import { URL_BASE_BACKEND } from "../../constants/urls";
-import { SET_WHAT_RENDER_SHOP } from "../constants/flags";
-import { SET_PRODUCTS } from "../constants/products";
-import { actionGenerator, axiosGet } from "./services";
+import { URL_BASE_BACKEND } from "../../../constants/urls";
+import { actionGenerator, axiosGet } from "../../services/services";
+import { SET_WHAT_RENDER_SHOP } from "../flags/const";
+import { SET_PRODUCTS } from "./const";
 
 export const getProducts = (page = 0, name) => {
   return async (dispatch) => {
