@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { getProducts } from "../../redux/actions/products";
-import { actionGenerator } from "../../redux/actions/services";
-import { SET_FORMS_NAME_PRODUCTS } from "../../redux/constants/forms";
+import { SET_FORMS_NAME_PRODUCTS } from "../../redux/reducers/forms/const";
+import { getProducts } from "../../redux/reducers/products/actions";
+import { actionGenerator } from "../../redux/services/services";
 import { useNameProduct } from "./hooks/useNameProduct";
 import Viewport from "./Viewport";
 

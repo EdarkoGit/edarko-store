@@ -1,4 +1,4 @@
-import { SET_PRODUCTS } from "../constants/products";
+import { SET_PRODUCTS } from "./const";
 
 const initialState = {
   product: "product",

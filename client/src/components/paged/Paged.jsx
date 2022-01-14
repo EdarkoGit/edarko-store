@@ -1,8 +1,8 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../../redux/actions/products";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
+import { getProducts } from "../../redux/reducers/products/actions";
 
 const Paged = () => {
   const dispatch = useDispatch();

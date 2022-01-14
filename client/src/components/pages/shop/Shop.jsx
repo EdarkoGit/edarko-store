@@ -4,8 +4,8 @@ import Paged from "../../paged/Paged";
 import Product from "../../product/Product";
 import Search from "../../Search/Search";
 import { Btn } from "../../common/btn/Btn";
-import { getProducts } from "../../../redux/actions/products";
 import { useDispatch } from "react-redux";
+import { getProducts } from "../../../redux/reducers/products/actions";
 
 const Shop = () => {
   const dispatch = useDispatch();

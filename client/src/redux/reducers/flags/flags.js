@@ -1,4 +1,4 @@
-import { SET_WHAT_RENDER_SHOP } from "../constants/flags";
+import { SET_WHAT_RENDER_SHOP } from "./const";
 
 const initialState = {
   whatRenderShop: "all",

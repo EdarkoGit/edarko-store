@@ -1,4 +1,4 @@
-import { SET_FORMS_NAME_PRODUCTS } from "../constants/forms";
+import { SET_FORMS_NAME_PRODUCTS } from "./const";
 
 const initialState = {
   nameProduct: "",
