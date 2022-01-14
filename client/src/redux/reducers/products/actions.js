@@ -1,5 +1,6 @@
 import { URL_BASE_BACKEND } from "../../../constants/urls";
-import { actionGenerator, axiosGet } from "../../services/services";
+import { axiosGet } from "../../../utils/axios";
+import { actionGenerator } from "../../services/services";
 import { SET_WHAT_RENDER_SHOP } from "../flags/const";
 import { SET_PRODUCTS } from "./const";
 

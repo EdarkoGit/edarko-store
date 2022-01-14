@@ -2,7 +2,11 @@ import React from "react";
 import { FilterStyle } from "./style";
 
 const Filter = () => {
-  return <FilterStyle>filter</FilterStyle>;
+  return (
+    <FilterStyle>
+      <select name="" id=""></select>
+    </FilterStyle>
+  );
 };
 
 export default Filter;
