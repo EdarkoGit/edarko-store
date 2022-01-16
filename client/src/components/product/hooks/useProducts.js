@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../../../redux/reducers/products/actions";
+import {
+  getProducts,
+  getProductsByName,
+} from "../../../redux/reducers/products/actions";
 
 export const useProducts = () => {
   const dispatch = useDispatch();
@@ -11,7 +14,7 @@ export const useProducts = () => {
   useEffect(() => {
     const whatRender = {
       name: function () {
-        dispatch(getProducts(0, nameProduct));
+        dispatch(getProductsByName(0, nameProduct));
       },
       all: function () {
         dispatch(getProducts());
