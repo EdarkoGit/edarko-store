@@ -1,11 +1,10 @@
-import { URL_BASE_BACKEND } from "../../../constants/urls";
 import { axiosGet } from "../../../utils/axios";
 import { actionGenerator } from "../../services/services";
 import { SET_ALL_CATEGORIES } from "./const";
 
 export const getCategories = () => {
   return async (dispatch) => {
-    const categories = await axiosGet(`${URL_BASE_BACKEND}/categories`);
+    const categories = await axiosGet(`/categories`);
     dispatch(actionGenerator(SET_ALL_CATEGORIES, categories));
     try {
     } catch (error) {

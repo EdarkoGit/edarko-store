@@ -1,4 +1,3 @@
-import { URL_BASE_BACKEND } from "../../../constants/urls";
 import { axiosGet } from "../../../utils/axios";
 import { actionGenerator } from "../../services/services";
 import { SET_WHAT_RENDER_SHOP } from "../flags/const";
@@ -9,9 +8,7 @@ export const getProducts = (page = 0, name) => {
     try {
       dispatch(actionGenerator(SET_WHAT_RENDER_SHOP, name ? "name" : "all"));
       const paged = await axiosGet(
-        name
-          ? `${URL_BASE_BACKEND}/products?page=${page}&&name=${name}`
-          : `${URL_BASE_BACKEND}/products?page=${page}`
+        name ? `/products?page=${page}&&name=${name}` : `/products?page=${page}`
       );
       dispatch(actionGenerator(SET_PRODUCTS, paged));
     } catch (error) {
