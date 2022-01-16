@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import {
   getProducts,
+  getProductsByCategory,
   getProductsByName,
 } from "../../redux/reducers/products/actions";
 
@@ -11,12 +12,15 @@ const Paged = () => {
   const dispatch = useDispatch();
   const { pageCount, page } = useSelector((state) => state.products.paged);
   const nameProduct = useSelector((state) => state.forms.nameProduct);
+  const categoryProduct = useSelector((state) => state.forms.categoryProduct);
   const whatRenderShop = useSelector((state) => state.flags.whatRenderShop);
   const handlePagedClick = ({ selected }) => {
     if (whatRenderShop === "name") {
       dispatch(getProductsByName(selected, nameProduct));
     } else if (whatRenderShop === "all") {
-      dispatch(getProducts());
+      dispatch(getProducts(selected));
+    } else if (whatRenderShop === "category") {
+      dispatch(getProductsByCategory(selected, categoryProduct));
     }
   };
   return (

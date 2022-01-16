@@ -1,3 +1,3 @@
-const productsByPage = 10;
+const productsByPage = 2;
 
 module.exports = { productsByPage };

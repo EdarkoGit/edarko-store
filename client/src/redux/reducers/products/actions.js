@@ -25,3 +25,16 @@ export const getProductsByName = (page = 0, name) => {
     }
   };
 };
+export const getProductsByCategory = (page = 0, category) => {
+  return async (dispatch) => {
+    try {
+      dispatch(actionGenerator(SET_WHAT_RENDER_SHOP, "category"));
+      const paged = await axiosGet(
+        `/products?page=${page}&&category=${category}`
+      );
+      dispatch(actionGenerator(SET_PRODUCTS, paged));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
