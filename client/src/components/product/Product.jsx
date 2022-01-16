@@ -7,7 +7,7 @@ const Product = () => {
   const products = useProducts();
   return (
     <ProductStyle>
-      {products ? card(products) : "No hay productos con ese name"}
+      {products ? card(products) : "No hay productos"}
     </ProductStyle>
   );
 };

@@ -1,5 +1,0 @@
-* armar el esqueleto del proyecto
-* montarlo a github he invitar a cada miembro del equipo
-* crear los modelos y relaciones
-* armar un mockup de data JSON para testear en postman las rutas...
-* armar las rutas mas importantes (crear productos y consultarlo).

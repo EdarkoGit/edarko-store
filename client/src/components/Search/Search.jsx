@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { SET_FORMS_NAME_PRODUCTS } from "../../redux/reducers/forms/const";
-import { getProducts } from "../../redux/reducers/products/actions";
+import { getProductsByName } from "../../redux/reducers/products/actions";
 import { actionGenerator } from "../../redux/services/services";
 import { useNameProduct } from "./hooks/useNameProduct";
 import Viewport from "./Viewport";
@@ -13,7 +13,7 @@ const Search = () => {
     e.preventDefault();
     if (name !== "") {
       dispatch(actionGenerator(SET_FORMS_NAME_PRODUCTS, name));
-      dispatch(getProducts(0, name));
+      dispatch(getProductsByName(0, name));
       setName("");
     }
   };
