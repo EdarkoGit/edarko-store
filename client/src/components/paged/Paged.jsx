@@ -13,14 +13,15 @@ const Paged = () => {
   const { pageCount, page } = useSelector((state) => state.products.paged);
   const nameProduct = useSelector((state) => state.forms.nameProduct);
   const categoryProduct = useSelector((state) => state.forms.categoryProduct);
+  const typeOrder = useSelector((state) => state.forms.typeOrder);
   const whatRenderShop = useSelector((state) => state.flags.whatRenderShop);
   const handlePagedClick = ({ selected }) => {
-    if (whatRenderShop === "name") {
-      dispatch(getProductsByName(selected, nameProduct));
-    } else if (whatRenderShop === "all") {
-      dispatch(getProducts(selected));
+    if (whatRenderShop === "all") {
+      dispatch(getProducts(selected, typeOrder));
+    } else if (whatRenderShop === "name") {
+      dispatch(getProductsByName(selected, nameProduct, typeOrder));
     } else if (whatRenderShop === "category") {
-      dispatch(getProductsByCategory(selected, categoryProduct));
+      dispatch(getProductsByCategory(selected, categoryProduct, typeOrder));
     }
   };
   return (
